@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kashmir Delight Package - ZoonTourism</title>
+  <meta name="description" content="Experience the charm of Kashmir with our 4 days/3 nights Kashmir Delight package featuring Shikara rides, houseboat stays, and scenic day trips.">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ---------- THEME COLORS ---------- */
+    :root{
+      --primary-color: #023121;
+      --secondary-color: #FFFFFF;
+      --accent-color: #ff6b6b;
+      --light-bg: #fbfcfd;
+      --dark-bg: #0f1720;
+      --muted: #7a8b8b;
+      --glass: rgba(255,255,255,0.06);
+      --card-radius: 14px;
+      --max-width: 1200px;
+    }
+
+    /* ---------- BASE RESET ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html, body {
+      height: 100%;
+    }
+    
+    /* Global Font Settings */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    body {
+      font-family: 'Merriweather Sans', sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+      color: #0b2130;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5;
+      overflow-x: hidden;
+      padding-top: 76px;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+      background: var(--primary-color) !important;
+      background: linear-gradient(135deg, var(--primary-color) 0%, #045d41 100%) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+      padding: 12px 0;
+      border-bottom: 2px solid rgba(255,255,255,0.1);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin-right: 30px;
+    }
+    
+    .navbar-brand img {
+      height: 80px;
+      width: auto;
+      filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.25));
+      transition: transform 0.3s ease;
+    }
+    
+    .navbar-brand:hover img {
+      transform: scale(1.05);
+    }
+
+    .nav-link {
+      position: relative;
+      margin: 0 15px;
+      color: white !important;
+      font-weight: 500;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+      padding: 10px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: rgba(255,255,255,0.9) !important;
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--primary-color);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    
+    .navbar-toggler {
+      border: 2px solid rgba(255,255,255,0.7);
+      padding: 8px 12px;
+      margin-right: 5px;
+      transition: all 0.2s ease;
+    }
+    
+    .navbar-toggler:focus {
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.25);
+      outline: none;
+    }
+    
+    .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+      width: 24px;
+      height: 24px;
+    }
+    
+    /* Mobile menu improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(2, 49, 33, 0.98);
+        border-radius: 0 0 15px 15px;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        margin-top: 10px;
+      }
+      
+      .nav-link {
+        padding: 15px;
+        border-radius: 8px;
+        margin: 5px 0;
+        transition: all 0.2s ease;
+      }
+      
+      .nav-link:hover {
+        background: rgba(255,255,255,0.1);
+        transform: translateY(0);
+      }
+      
+      .nav-link::after {
+        display: none;
+      }
+      
+      .navbar-brand img {
+        height: 60px; /* Slightly smaller logo on mobile */
+      }
+    }
+
+    /* ---------- PACKAGE HEADER ---------- */
+    .package-header {
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+    .ph-card {
+      background: #fff;
+      border-radius: var(--card-radius);
+      box-shadow: 0 10px 30px rgba(2,49,33,0.08);
+      overflow: hidden;
+      border: 1px solid rgba(2,49,33,0.06);
+    }
+    .ph-left {
+      padding: 24px;
+    }
+    .package-badge {
+      display: inline-block;
+      background: #ff5a5f;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    .package-title {
+      margin: 0 0 8px 0;
+    }
+    .package-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 20px;
+      color: #35524a;
+      margin: 8px 0 14px 0;
+    }
+    .package-meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .price-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e8f2ee;
+      color: #0b5137;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .book-now-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-color);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+    }
+    .book-now-btn:hover { opacity: 0.92; color: #fff; }
+    .ph-right { background:#000; }
+    .ph-carousel img { width: 100%; height: 340px; object-fit: cover; display:block; }
+    .ph-caption { font-size: 0.9rem; color:#fff; background: rgba(0,0,0,0.35); padding:6px 10px; border-radius:8px; display:inline-block; }
+    @media (max-width: 767.98px){
+      .book-now-btn { position: sticky; bottom: 8px; z-index: 2; }
+      .ph-carousel img { height: 260px; }
+    }
+
+    /* ---------- PACKAGE DETAILS ---------- */
+    .package-details {
+      padding: 50px 0;
+    }
+    
+    .highlight-card {
+      border-radius: var(--card-radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      background-color: white;
+      overflow: hidden;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .highlight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+    
+    .highlight-card-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(2, 49, 33, 0.1);
+      border-radius: 50%;
+      color: var(--primary-color);
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    
+    .day-card {
+      background-color: white;
+      border-radius: var(--card-radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+    
+    .day-header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 15px 20px;
+    }
+    
+    .day-content {
+      padding: 20px;
+    }
+    
+    .activity {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px dashed rgba(0,0,0,0.1);
+    }
+    
+    .activity:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .activity-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(2, 49, 33, 0.1);
+      border-radius: 50%;
+      color: var(--primary-color);
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    
+    .inclusion-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .inclusion-item i {
+      color: var(--primary-color);
+      margin-right: 10px;
+    }
+    
+    .exclusion-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .exclusion-item i {
+      color: var(--accent-color);
+      margin-right: 10px;
+    }
+    
+    .cta-section {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 50px 0;
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 20px;
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      color: white;
+    }
+
+  /* ---------- FOOTER ---------- */
+    .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer h5 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .footer a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+    /* Floating Book Now Button */
+    .floating-book-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #ff6b6b;
+      color: white;
+      border-radius: 50px;
+      padding: 15px 25px;
+      font-size: 18px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+      border: none;
+      z-index: 9999; /* ensure always above content */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    
+    .floating-book-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+      background: #ff5252;
+      color: white;
+      text-decoration: none;
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+      }
+    }
+    /* Enquiry modal error handling */
+    #enquiryModal .error-message { display:none; font-size:0.8rem; color:var(--accent-color); margin-top:4px; }
+    #enquiryModal .form-control.error + .error-message { display:block; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+      <img src="final logo.png" alt="ZoonTourism" style="height: 100px; width: 150px; max-width: 220px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="packages.html">Packages</a></li>
+                <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="things-to-do.html">Things to Do</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+  <!-- Package Header: two-column layout -->
+  <section class="package-header" aria-label="Package header">
+    <div class="container">
+      <div class="ph-card">
+        <div class="row g-0 align-items-stretch">
+          <!-- Left content -->
+          <div class="col-lg-7 ph-left">
+            <span class="package-badge" aria-label="Best Seller badge">Best Seller</span>
+            <h1 class="package-title">Kashmir Delight</h1>
+            <div class="package-meta" aria-label="Package summary">
+              <span><i class="fas fa-clock" aria-hidden="true"></i> 4 Days / 3 Nights</span>
+              <span><i class="fas fa-users" aria-hidden="true"></i> 2–6 People</span>
+              <span><i class="fas fa-star" aria-hidden="true"></i> 4.5/5 Rating</span>
+            </div>
+            <div class="price-tag" aria-label="Starting price">Starting from ₹13,500 per person</div>
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="book-now-btn" href="#" data-enquiry-btn data-package="Kashmir Delight" aria-label="Book Kashmir Delight now" role="button">
+                <i class="fas fa-bolt" aria-hidden="true"></i> Book Now
+              </a>
+              <a class="btn btn-outline-success" href="#faqs" aria-label="Jump to FAQs">FAQs</a>
+            </div>
+            <p class="mt-3 mb-0" style="color:#35524a; font-size:0.95rem;">Includes stays, meals, private cab, and Shikara ride.</p>
+          </div>
+          <!-- Right gallery -->
+          <div class="col-lg-5 ph-right">
+            <div id="delightGallery" class="carousel slide ph-carousel" data-bs-ride="carousel" aria-label="Package gallery carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#delightGallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#delightGallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#delightGallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <picture>
+                    <!-- Optional WebP source if available -->
+                    <!-- <source type="image/webp" srcset="images/delight-1.webp"> -->
+                    <img loading="lazy" decoding="async" alt="Dal Lake houseboats" src="data:image/jpeg;base64,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"/>
+                  </picture>
+                  <div class="carousel-caption d-none d-md-block">
+                    <span class="ph-caption">Dal Lake, Srinagar</span>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <picture>
+                    <!-- <source type="image/webp" srcset="images/delight-2.webp"> -->
+                    <img loading="lazy" decoding="async" alt="Gulmarg meadows" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-3V6w9Bx8q1_ARP4UAcWttQKCcNuIr-Dikg&s"/>
+                  </picture>
+                </div>
+                <div class="carousel-item">
+                  <picture>
+                    <!-- <source type="image/webp" srcset="images/delight-3.webp"> -->
+                    <img loading="lazy" decoding="async" alt="Pahalgam valley" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBeHJ0Q86ErPbkwS4Q3Gbk3Cos0GFoLnWk3g&s"/>
+                  </picture>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#delightGallery" data-bs-slide="prev" aria-label="Previous slide">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#delightGallery" data-bs-slide="next" aria-label="Next slide">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Package Details -->
+  <section class="package-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2>Experience the Paradise on Earth</h2>
+          <p class="lead mb-4">
+            Our 4-day Kashmir Delight package offers the perfect introduction to the breathtaking beauty of Kashmir, known as "Paradise on Earth." Enjoy comfortable stays, iconic Shikara rides, and scenic day trips to enchanting destinations like Gulmarg and Pahalgam.
+          </p>
+
+          <!-- Day Cards -->
+          <h3 class="mt-5 mb-4">Detailed Itinerary</h3>
+          
+          <div class="day-card">
+            <div class="day-header">
+              <h4 class="mb-0">Day 1: Arrival in Srinagar</h4>
+            </div>
+            <div class="day-content">
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-plane-arrival"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Airport Pickup</h5>
+                  <p>Our representative will receive you at Srinagar International Airport and transfer you to your houseboat.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-home"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Houseboat Check-in</h5>
+                  <p>Experience the traditional Kashmiri hospitality as you check into your luxurious houseboat on Dal Lake.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-ship"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Evening Shikara Ride</h5>
+                  <p>Enjoy a relaxing 1-hour Shikara ride on the picturesque Dal Lake, witnessing the floating gardens and local way of life.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Welcome Dinner</h5>
+                  <p>Savor a delicious welcome dinner at the houseboat with authentic Kashmiri cuisine.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <h4 class="mb-0">Day 2: Srinagar Local Sightseeing</h4>
+            </div>
+            <div class="day-content">
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Breakfast</h5>
+                  <p>Enjoy a hearty breakfast at the houseboat.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-tree"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Mughal Gardens Tour</h5>
+                  <p>Visit the famous Mughal Gardens including Nishat Bagh, Shalimar Bagh, and Chashme Shahi, known for their terraced lawns, fountains, and gorgeous flowerbeds.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-mosque"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Heritage Walk</h5>
+                  <p>Visit Shankaracharya Temple and Hazratbal Shrine to learn about the diverse cultural heritage of Kashmir.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-store"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Local Market Visit</h5>
+                  <p>Experience the vibrant markets of Srinagar, where you can shop for traditional Kashmiri handicrafts, pashmina shawls, and dry fruits.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Return to Houseboat</h5>
+                  <p>Return to your houseboat for dinner and overnight stay.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <h4 class="mb-0">Day 3: Day Trip to Gulmarg</h4>
+            </div>
+            <div class="day-content">
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Early Breakfast</h5>
+                  <p>Start your day with an early breakfast at the houseboat.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Drive to Gulmarg</h5>
+                  <p>Embark on a scenic 2-hour drive to Gulmarg, known as the 'Meadow of Flowers', situated at an altitude of 8,700 ft.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-cable-car"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Gondola Ride</h5>
+                  <p>Take a thrilling gondola cable car ride to Apharwat Peak, offering panoramic views of the surrounding Himalayan ranges (optional, tickets not included).</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-hiking"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Leisure Activities</h5>
+                  <p>Enjoy leisure time for horse riding or simply relaxing amidst the beautiful landscapes.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Return to Srinagar</h5>
+                  <p>Return to your houseboat in Srinagar for dinner and overnight stay.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <h4 class="mb-0">Day 4: Departure</h4>
+            </div>
+            <div class="day-content">
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Breakfast</h5>
+                  <p>Enjoy your final breakfast at the houseboat.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Check-out</h5>
+                  <p>Complete the check-out formalities from your houseboat.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Airport Transfer</h5>
+                  <p>Transfer to Srinagar International Airport for your onward journey.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 100px;">
+            <div class="card shadow">
+              <div class="card-body">
+                <h3>Package Price</h3>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4 class="text-primary mb-0">₹13,500</h4>
+                  <span>per person</span>
+                </div>
+                
+                <hr>
+                
+                <h5>Package Highlights</h5>
+                <div class="mb-4">
+                  <div class="highlight-tag mb-2">Cultural</div>
+                  <div class="highlight-tag mb-2">Relaxing</div>
+                  <div class="highlight-tag mb-2">Photography</div>
+                </div>
+                
+                <h5>Inclusions</h5>
+                <div class="mb-4">
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Airport Transfers</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> 3 Nights Accommodation</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Daily Breakfast & Dinner</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Sightseeing as per Itinerary</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> All Transfers in Private Vehicle</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Shikara Ride on Dal Lake</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> All Applicable Taxes</div>
+                </div>
+                
+                <h5>Exclusions</h5>
+                <div class="mb-4">
+                  <div class="exclusion-item"><i class="fas fa-times-circle"></i> Airfare</div>
+                  <div class="exclusion-item"><i class="fas fa-times-circle"></i> Lunch</div>
+                  <div class="exclusion-item"><i class="fas fa-times-circle"></i> Gondola Tickets</div>
+                  <div class="exclusion-item"><i class="fas fa-times-circle"></i> Personal Expenses</div>
+                  <div class="exclusion-item"><i class="fas fa-times-circle"></i> Travel Insurance</div>
+                </div>
+                
+                <a href="#" data-enquiry-btn data-package="Kashmir Delight" class="btn btn-primary w-100">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs" class="py-5" aria-label="Frequently Asked Questions">
+    <div class="container">
+      <h2 class="mb-4">Frequently Asked Questions</h2>
+      <div class="accordion" id="delightFaqAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="delight-q1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#delight-a1" aria-expanded="true" aria-controls="delight-a1">
+              What's included in this package?
+            </button>
+          </h3>
+          <div id="delight-a1" class="accordion-collapse collapse show" aria-labelledby="delight-q1" data-bs-parent="#delightFaqAccordion">
+            <div class="accordion-body">
+              Hotels, houseboat stay, daily breakfast and dinner, private cab, and a Shikara ride on Dal Lake.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="delight-q2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#delight-a2" aria-expanded="false" aria-controls="delight-a2">
+              Can the itinerary be customized?
+            </button>
+          </h3>
+          <div id="delight-a2" class="accordion-collapse collapse" aria-labelledby="delight-q2" data-bs-parent="#delightFaqAccordion">
+            <div class="accordion-body">
+              Yes, we can adjust destinations and stays based on your preferences.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="delight-q3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#delight-a3" aria-expanded="false" aria-controls="delight-a3">
+              What's the best season to book?
+            </button>
+          </h3>
+          <div id="delight-a3" class="accordion-collapse collapse" aria-labelledby="delight-q3" data-bs-parent="#delightFaqAccordion">
+            <div class="accordion-body">
+              Kashmir is year-round — spring blossoms, summer escapes, autumn colors, and winter snow.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2>Ready to Experience Kashmir?</h2>
+          <p>Book your Kashmir Delight package today and create memories that will last a lifetime.</p>
+          <a href="contact.html" class="cta-btn">
+            Book Now <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Book Now Button -->
+  <a href="#" data-enquiry-btn data-package="Kashmir Delight" class="floating-book-btn" aria-label="Open enquiry form for Kashmir Delight">
+    <i class="fas fa-book-open"></i> Book Now
+  </a>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-mountain"></i> ZoonTourism</h5>
+                    <p>We believe every journey should be more than just a trip—it should be a story worth telling. With years of expertise in crafting unforgettable travel experiences, we specialize in showcasing the breathtaking beauty of Kashmir and beyond.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/zoontourism/?ref=pl_edit_xav_ig_profile_page_web#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/zoontourism"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/zoontourism/"><i class="fab fa-instagram"></i></a>
+                        
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="destinations.html">Destinations</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Zakir Nagar, Okhla , New Delhi 110025</p>
+                    <p><i class="fas fa-phone"></i> +91 93184 07221</p>
+                    <p><i class="fas fa-envelope"></i> zoontourism@gmail.com</p>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 ZoonTourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Enquiry Modal (reused contact form) -->
+  <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header" style="background: var(--primary-color); color:#fff;">
+          <h5 class="modal-title" id="enquiryModalLabel">Enquiry Form</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="enquiryForm" novalidate>
+            <input type="hidden" id="enquiryPackage" name="packageName" />
+            <div class="mb-3">
+              <label for="enqName" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="enqName" required aria-required="true" aria-describedby="enqNameErr">
+              <div id="enqNameErr" class="error-message">Please enter your name</div>
+            </div>
+            <div class="mb-3">
+              <label for="enqEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="enqEmail" required aria-required="true" aria-describedby="enqEmailErr">
+              <div id="enqEmailErr" class="error-message">Please enter a valid email</div>
+            </div>
+            <div class="mb-3">
+              <label for="enqPhone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="enqPhone" required aria-required="true" aria-describedby="enqPhoneErr">
+              <div id="enqPhoneErr" class="error-message">Please enter a valid phone number</div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="enqPersons" class="form-label">Number of Persons</label>
+                <input type="number" min="1" class="form-control" id="enqPersons" required aria-required="true" aria-describedby="enqPersonsErr">
+                <div id="enqPersonsErr" class="error-message">Please enter number of persons</div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="enqDate" class="form-label">Travel Date</label>
+                <input type="date" class="form-control" id="enqDate" required aria-required="true" aria-describedby="enqDateErr">
+                <div id="enqDateErr" class="error-message">Please select a travel date</div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="enqMessage" class="form-label">Any Other Query (Optional)</label>
+              <textarea id="enqMessage" class="form-control" rows="4" aria-label="Additional message"></textarea>
+            </div>
+            <button type="submit" class="submit-btn btn w-100" style="background: var(--primary-color); color:#fff;">Send via WhatsApp</button>
+          </form>
+          <small class="text-muted d-block mt-2">We will never share your details. The form opens WhatsApp chat directly.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  // Utility validators
+  function isValidEmail(email){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);} 
+  function isValidPhone(p){return /^[0-9+\-\s()]{10,}$/.test(p);} 
+  // Open modal with package name
+  function attachEnquiryHandlers(){
+    const modalEl = document.getElementById('enquiryModal');
+    const packageInput = document.getElementById('enquiryPackage');
+    document.querySelectorAll('[data-enquiry-btn]').forEach(btn=>{
+      btn.addEventListener('click', e=>{
+        const pkg = btn.getAttribute('data-package') || document.title || 'Kashmir Package';
+        packageInput.value = pkg;
+        const m = new bootstrap.Modal(modalEl);
+        m.show();
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', attachEnquiryHandlers);
+  // Form submit
+  document.addEventListener('submit', function(e){
+    if(e.target && e.target.id === 'enquiryForm'){
+      e.preventDefault();
+      const name = enqName.value.trim();
+      const email = enqEmail.value.trim();
+      const phone = enqPhone.value.trim();
+      const persons = enqPersons.value.trim();
+      const date = enqDate.value.trim();
+      const message = enqMessage.value.trim();
+      let ok = true;
+  function flag(input, valid){ if(!valid){input.classList.add('error');} else {input.classList.remove('error');} if(!valid) ok=false; }
+      flag(enqName, !!name);
+      flag(enqEmail, isValidEmail(email));
+      flag(enqPhone, isValidPhone(phone));
+      flag(enqPersons, persons && parseInt(persons) > 0);
+      flag(enqDate, !!date);
+      if(!ok) return;
+      const pkg = document.getElementById('enquiryPackage').value || 'Kashmir Package';
+      const whatsappNumber = '9318407221';
+      const text = `Hello! I’d like to enquire about a package.%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Selected Package:* ${encodeURIComponent(pkg)}%0A*Number of Persons:* ${encodeURIComponent(persons)}%0A*Travel Date:* ${encodeURIComponent(date)}%0A*Message:* ${encodeURIComponent(message || 'No additional queries.')}`;
+      const wa = `https://wa.me/${whatsappNumber}?text=${text}`;
+      window.open(wa, '_blank');
+      e.target.reset();
+      bootstrap.Modal.getInstance(document.getElementById('enquiryModal')).hide();
+    }
+  });
+  // Live clear error on input
+  ['enqName','enqEmail','enqPhone','enqPersons','enqDate'].forEach(id=>{
+    const el=document.getElementById(id); if(!el) return; ['input','change','blur'].forEach(evt=>{
+      el.addEventListener(evt,()=>{ if(el.value.trim()){ el.classList.remove('error'); }});
+    });
+  });
+  </script>
+</body>
+</html>

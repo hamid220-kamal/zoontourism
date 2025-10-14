@@ -1,0 +1,1061 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kashmir Ultimate Tour - ZoonTourism</title>
+  <meta name="description" content="Experience the complete beauty of Kashmir with our 7 days/6 nights tour package featuring Srinagar, Gulmarg, Sonmarg, Pahalgam and Yusmarg.">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ---------- THEME COLORS ---------- */
+    :root{
+      --primary-color: #023121;
+      --secondary-color: #FFFFFF;
+      --accent-color: #ff6b6b;
+      --light-bg: #fbfcfd;
+      --dark-bg: #0f1720;
+      --muted: #7a8b8b;
+      --glass: rgba(255,255,255,0.06);
+      --card-radius: 14px;
+      --max-width: 1200px;
+    }
+
+    /* ---------- BASE RESET ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html, body {
+      height: 100%;
+    }
+    
+    /* Global Font Settings */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    body {
+      font-family: 'Merriweather Sans', sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+      color: #0b2130;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5;
+      overflow-x: hidden;
+      padding-top: 76px;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+      background: var(--primary-color) !important;
+      background: linear-gradient(135deg, var(--primary-color) 0%, #045d41 100%) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+      padding: 12px 0;
+      border-bottom: 2px solid rgba(255,255,255,0.1);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin-right: 30px;
+    }
+    
+    .navbar-brand img {
+      height: 80px;
+      width: auto;
+      filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.25));
+      transition: transform 0.3s ease;
+    }
+    
+    .navbar-brand:hover img {
+      transform: scale(1.05);
+    }
+
+    .nav-link {
+      position: relative;
+      margin: 0 15px;
+      color: white !important;
+      font-weight: 500;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+      padding: 10px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: rgba(255,255,255,0.9) !important;
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: white;
+      border-radius: 3px;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    
+    .nav-link.active {
+      font-weight: 700;
+    }
+    
+    .navbar-toggler {
+      border: 2px solid rgba(255,255,255,0.7);
+      padding: 8px 12px;
+      margin-right: 5px;
+      transition: all 0.2s ease;
+    }
+    
+    .navbar-toggler:focus {
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.25);
+      outline: none;
+    }
+    
+    .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+      width: 24px;
+      height: 24px;
+    }
+    
+    /* Mobile menu improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(2, 49, 33, 0.98);
+        border-radius: 0 0 15px 15px;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        margin-top: 10px;
+      }
+      
+      .nav-link {
+        padding: 15px;
+        border-radius: 8px;
+        margin: 5px 0;
+        transition: all 0.2s ease;
+      }
+      
+      .nav-link:hover {
+        background: rgba(255,255,255,0.1);
+        transform: translateY(0);
+      }
+      
+      .nav-link::after {
+        display: none;
+      }
+      
+      .navbar-brand img {
+        height: 60px; /* Slightly smaller logo on mobile */
+      }
+    }
+
+    /* ---------- PACKAGE HEADER ---------- */
+    .package-hero {
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .package-hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    }
+    
+    .package-hero-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+    }
+    
+    .package-badge {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 4px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    
+    .package-meta {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    
+    .package-meta span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* ---------- PACKAGE DETAILS ---------- */
+    .package-details {
+      padding: 50px 0;
+    }
+    
+    .highlight-card {
+      border-radius: var(--card-radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      background-color: white;
+      overflow: hidden;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .highlight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+    
+    .highlight-card-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(2, 49, 33, 0.1);
+      border-radius: 50%;
+      color: var(--primary-color);
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    
+    .day-card {
+      background-color: white;
+      border-radius: var(--card-radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+    
+    .day-header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 15px 20px;
+    }
+    
+    .day-content {
+      padding: 20px;
+    }
+    
+    .activity {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px dashed rgba(0,0,0,0.1);
+    }
+    
+    .activity:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .activity-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(2, 49, 33, 0.1);
+      border-radius: 50%;
+      color: var(--primary-color);
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    
+    .inclusion-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .inclusion-item i {
+      color: var(--primary-color);
+      margin-right: 10px;
+    }
+    
+    .exclusion-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .exclusion-item i {
+      color: var(--accent-color);
+      margin-right: 10px;
+    }
+    
+    .cta-section {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 50px 0;
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 20px;
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      color: white;
+    }
+    
+    .highlight-tag {
+      display: inline-block;
+      background-color: rgba(2, 49, 33, 0.1);
+      color: var(--primary-color);
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-right: 5px;
+    }
+
+   /* ---------- FOOTER ---------- */
+    .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer h5 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .footer a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+    /* Floating Book Now Button */
+    .floating-book-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #ff6b6b;
+      color: white;
+      border-radius: 50px;
+      padding: 15px 25px;
+      font-size: 18px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+      border: none;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    
+    .floating-book-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+      background: #ff5252;
+      color: white;
+      text-decoration: none;
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+      }
+    }
+    /* Enquiry modal validation messaging */
+    #enquiryModal .error-message { display:none; font-size:0.8rem; color:var(--accent-color); margin-top:4px; }
+    #enquiryModal .form-control.error + .error-message { display:block; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+ <img src="final logo.png" alt="ZoonTourism" style="height: 100px; width: 150px; max-width: 220px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="packages.html">Packages</a></li>
+                <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="things-to-do.html">Things to Do</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+  <!-- Package Hero -->
+  <div class="package-hero" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIynT4MpGlCnPaIkpExhsmjFZAC1DoC4o-vQ&s');">
+    <div class="container">
+      <div class="package-hero-content">
+        <span class="package-badge">Luxury</span>
+        <h1>Kashmir Ultimate Tour</h1>
+        <div class="package-meta">
+          <span><i class="fas fa-clock"></i> 7 Days / 6 Nights</span>
+          <span><i class="fas fa-users"></i> 2-8 People</span>
+          <span><i class="fas fa-star"></i> 4.9/5 Rating</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Package Details -->
+  <section class="package-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2>The Ultimate Kashmir Experience</h2>
+          <p class="lead mb-4">
+            Our 7-day Ultimate Kashmir Tour offers the most comprehensive journey through the paradise on earth. Experience the breathtaking landscapes, rich culture, and authentic experiences across Srinagar, Gulmarg, Sonmarg, Pahalgam, and the hidden gem of Yusmarg.
+          </p>
+
+          <!-- Day Cards -->
+          <h3 class="mt-5 mb-4">Detailed Itinerary</h3>
+          
+          <div class="day-card">
+            <div class="day-header">
+              <h4 class="mb-0">Day 1: Arrival in Srinagar</h4>
+            </div>
+            <div class="day-content">
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-plane-arrival"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>VIP Airport Welcome</h5>
+                  <p>Personalized welcome at Srinagar International Airport with traditional Kashmiri greetings by our representative who will assist with your transfer to the luxury hotel or premium houseboat.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-home"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Luxury Check-in</h5>
+                  <p>Settle into your premium accommodation with welcome drinks and traditional Kashmiri snacks.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-ship"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Private Sunset Shikara Ride</h5>
+                  <p>Experience an exclusive evening Shikara ride on the pristine Dal Lake, gliding through floating gardens and witnessing the local lifestyle on the lake while enjoying tea and local snacks.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Special Welcome Dinner</h5>
+                  <p>Enjoy an authentic multi-course Wazwan dinner featuring traditional Kashmiri delicacies at your accommodation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <h4 class="mb-0">Day 2: Srinagar Heritage Tour</h4>
+            </div>
+            <div class="day-content">
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Gourmet Breakfast</h5>
+                  <p>Begin your day with a lavish Kashmiri breakfast at your accommodation.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-tree"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Mughal Gardens Tour</h5>
+                  <p>Visit the spectacular Mughal Gardens including Nishat Bagh (Garden of Pleasure), Shalimar Bagh (Garden of Love), and Chashme Shahi (Royal Spring), featuring terraced lawns, cascading fountains, and exquisite flowerbeds with expert guide insights into their historical significance.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-mosque"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Historical Sites with Expert Guide</h5>
+                  <p>Visit the sacred Hazratbal Shrine with its white marble elegance, the ancient wooden Khanqah of Shah Hamadan showcasing traditional Kashmiri architecture, and the hilltop Shankaracharya Temple offering panoramic views of the city.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-store"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Artisan Workshops</h5>
+                  <p>Exclusive visits to master craftsmen workshops to witness the creation of Kashmiri handicrafts including pashmina weaving, carpet making, and papier-mâché artistry with opportunities to purchase directly from artisans.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Return to Accommodation</h5>
+                  <p>Return to your accommodation for a gourmet dinner featuring fusion Kashmiri cuisine and overnight stay.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <h4 class="mb-0">Day 3: Gulmarg Adventure</h4>
+            </div>
+            <div class="day-content">
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Early Breakfast</h5>
+                  <p>Start your day with an energizing breakfast at your accommodation.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Scenic Drive to Gulmarg</h5>
+                  <p>Embark on a picturesque 2-hour drive to Gulmarg, the 'Meadow of Flowers', situated at an altitude of 8,700 ft. Stop at scenic viewpoints along the way for photo opportunities.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-cable-car"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Premium Gondola Experience</h5>
+                  <p>Enjoy priority access to the world's second-highest gondola ride to Apharwat Peak (Phase 1 & 2), offering breathtaking views of the surrounding Himalayan ranges (tickets included).</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-skiing"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Premium Activities</h5>
+                  <p>Choose from premium activities including golf at the world's highest golf course, professional guided skiing (in winter), or a guided nature walk with picnic lunch in the meadows.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Return to Srinagar</h5>
+                  <p>Return to your accommodation in Srinagar for a relaxing evening with dinner and overnight stay.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <h4 class="mb-0">Day 4: Sonmarg Expedition</h4>
+            </div>
+            <div class="day-content">
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Breakfast</h5>
+                  <p>Enjoy a hearty breakfast before your day trip.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Drive to Sonmarg</h5>
+                  <p>Embark on a scenic 3-hour drive to Sonmarg, the 'Meadow of Gold', located at 9,200 ft along the ancient Silk Route. Travel through pine forests and villages with stops at panoramic viewpoints.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-mountain"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Thajiwas Glacier Experience</h5>
+                  <p>Visit the magnificent Thajiwas Glacier with options for guided trekking or horseback riding through snow-covered landscapes (included in package).</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Mountain Picnic Lunch</h5>
+                  <p>Enjoy a specially prepared mountain picnic lunch with hot beverages in a scenic location.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-water"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Riverside Relaxation</h5>
+                  <p>Spend time beside the Sindh River, soaking in the pristine mountain views and fresh air.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Return to Srinagar</h5>
+                  <p>Return to your accommodation in Srinagar for dinner and overnight stay.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <h4 class="mb-0">Day 5: Pahalgam Valley</h4>
+            </div>
+            <div class="day-content">
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Breakfast</h5>
+                  <p>Start your day with a nutritious breakfast at your accommodation.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Scenic Drive to Pahalgam</h5>
+                  <p>Embark on a scenic 3-hour drive to Pahalgam, the 'Valley of Shepherds', passing through saffron fields, traditional villages, and the breathtaking Lidder Valley with stops at an authentic saffron farm.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-location-arrow"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Valley Exploration</h5>
+                  <p>Private guided tours of Betaab Valley, Chandanwari, and Aru Valley in a dedicated local vehicle, accessing spots off the typical tourist routes.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-fishing-rod"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Lidder River Activities</h5>
+                  <p>Optional activities by the Lidder River including guided fishing excursion or riverside meditation session.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Return to Srinagar</h5>
+                  <p>Return to your accommodation in Srinagar for dinner and overnight stay.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <h4 class="mb-0">Day 6: Yusmarg - Hidden Gem</h4>
+            </div>
+            <div class="day-content">
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Breakfast</h5>
+                  <p>Enjoy breakfast at your accommodation.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Drive to Yusmarg</h5>
+                  <p>Embark on a 2-hour drive to the less-explored Yusmarg, a pristine meadow surrounded by pine forests and snow-capped mountains.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-hiking"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Nature Walk</h5>
+                  <p>Guided nature walk through pine forests to Doodh Ganga River, known for its crystal clear waters.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-horse"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Meadow Exploration</h5>
+                  <p>Explore the beautiful meadows and surrounding hills with optional horseback riding through this untouched paradise.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Authentic Experience</h5>
+                  <p>Visit a local Gujjar family home for traditional Kashmiri noon chai (salt tea) and local snacks for an authentic cultural experience.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Return to Srinagar</h5>
+                  <p>Return to your accommodation in Srinagar for a special farewell dinner featuring live music and overnight stay.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <h4 class="mb-0">Day 7: Departure</h4>
+            </div>
+            <div class="day-content">
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Breakfast</h5>
+                  <p>Enjoy your final breakfast at your accommodation.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-sunrise"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Optional Early Morning Lake View</h5>
+                  <p>For early risers, enjoy a final peaceful morning view of Dal Lake with complimentary coffee service.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-store"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Curated Shopping Experience</h5>
+                  <p>Visit select boutique shops for last-minute authentic Kashmiri souvenirs with expert guidance to ensure quality purchases.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>Check-out</h5>
+                  <p>Complete check-out formalities with assistance from our staff.</p>
+                </div>
+              </div>
+              <div class="activity">
+                <div class="activity-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="activity-details">
+                  <h5>VIP Airport Transfer</h5>
+                  <p>Comfortable transfer to Srinagar International Airport for your onward journey with a farewell gift hamper of Kashmiri specialties.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 100px;">
+            <div class="card shadow">
+              <div class="card-body">
+                <h3>Package Price</h3>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4 class="text-primary mb-0">₹24,500</h4>
+                  <span>per person</span>
+                </div>
+                
+                <hr>
+                
+                <h5>Package Highlights</h5>
+                <div class="mb-4">
+                  <div class="highlight-tag mb-2">Luxury</div>
+                  <div class="highlight-tag mb-2">All-inclusive</div>
+                  <div class="highlight-tag mb-2">Cultural</div>
+                  <div class="highlight-tag mb-2">Adventure</div>
+                  <div class="highlight-tag mb-2">Hidden Gems</div>
+                </div>
+                
+                <h5>Inclusions</h5>
+                <div class="mb-4">
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> VIP Airport Transfers</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> 6 Nights Luxury Accommodation</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Daily Breakfast, Dinner & Selected Lunches</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Premium Sightseeing Tours</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Private Vehicle with Driver</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Private Shikara Ride</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Professional Guide Throughout</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Gondola Ride Tickets</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Selected Activity Fees</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Yusmarg Excursion</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> Farewell Gift</div>
+                  <div class="inclusion-item"><i class="fas fa-check-circle"></i> All Applicable Taxes</div>
+                </div>
+                
+                <h5>Exclusions</h5>
+                <div class="mb-4">
+                  <div class="exclusion-item"><i class="fas fa-times-circle"></i> Airfare</div>
+                  <div class="exclusion-item"><i class="fas fa-times-circle"></i> Personal Expenses</div>
+                  <div class="exclusion-item"><i class="fas fa-times-circle"></i> Optional Activities</div>
+                  <div class="exclusion-item"><i class="fas fa-times-circle"></i> Travel Insurance</div>
+                  <div class="exclusion-item"><i class="fas fa-times-circle"></i> Any Item Not Mentioned in Inclusions</div>
+                </div>
+                
+                <a href="#" data-enquiry-btn data-package="Kashmir Ultimate Tour" class="btn btn-primary w-100">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2>Experience the Ultimate Kashmir Journey</h2>
+          <p>Book your Premium Kashmir Ultimate Tour today and create memories that will last a lifetime in this paradise on earth.</p>
+          <a href="#" data-enquiry-btn data-package="Kashmir Ultimate Tour" class="cta-btn">
+            Book Now <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Book Now Button -->
+  <a href="#" data-enquiry-btn data-package="Kashmir Ultimate Tour" class="floating-book-btn" aria-label="Open enquiry form for Kashmir Ultimate Tour">
+    <i class="fas fa-book-open"></i> Book Now
+  </a>
+
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-mountain"></i> ZoonTourism</h5>
+                    <p>We believe every journey should be more than just a trip—it should be a story worth telling. With years of expertise in crafting unforgettable travel experiences, we specialize in showcasing the breathtaking beauty of Kashmir and beyond.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/zoontourism/?ref=pl_edit_xav_ig_profile_page_web#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/zoontourism"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/zoontourism/"><i class="fab fa-instagram"></i></a>
+                        
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="destinations.html">Destinations</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Zakir Nagar, Okhla , New Delhi 110025</p>
+                    <p><i class="fas fa-phone"></i> +91 93184 07221</p>
+                    <p><i class="fas fa-envelope"></i> zoontourism@gmail.com</p>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 ZoonTourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Enquiry Modal -->
+  <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header" style="background: var(--primary-color); color:#fff;">
+          <h5 class="modal-title" id="enquiryModalLabel">Enquiry Form</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="enquiryForm" novalidate>
+            <input type="hidden" id="enquiryPackage" />
+            <div class="mb-3">
+              <label for="enqName" class="form-label">Your Name</label>
+              <input id="enqName" type="text" class="form-control" required aria-required="true">
+              <div class="error-message">Please enter your name</div>
+            </div>
+            <div class="mb-3">
+              <label for="enqEmail" class="form-label">Email</label>
+              <input id="enqEmail" type="email" class="form-control" required aria-required="true">
+              <div class="error-message">Please enter a valid email</div>
+            </div>
+            <div class="mb-3">
+              <label for="enqPhone" class="form-label">Phone Number</label>
+              <input id="enqPhone" type="tel" class="form-control" required aria-required="true">
+              <div class="error-message">Please enter a valid phone number</div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="enqPersons" class="form-label">Number of Persons</label>
+                <input id="enqPersons" type="number" min="1" class="form-control" required aria-required="true">
+                <div class="error-message">Please enter number of persons</div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="enqDate" class="form-label">Travel Date</label>
+                <input id="enqDate" type="date" class="form-control" required aria-required="true">
+                <div class="error-message">Please select a travel date</div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="enqMessage" class="form-label">Any Other Query (Optional)</label>
+              <textarea id="enqMessage" class="form-control" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn w-100" style="background: var(--primary-color); color:#fff;">Send via WhatsApp</button>
+          </form>
+          <small class="text-muted d-block mt-2">WhatsApp will open in a new tab.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function isValidEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);} function isValidPhone(p){return /^[0-9+\-\s()]{10,}$/.test(p);} 
+    document.querySelectorAll('[data-enquiry-btn]').forEach(btn=>{ btn.addEventListener('click',()=>{ document.getElementById('enquiryPackage').value=btn.getAttribute('data-package')||'Kashmir Ultimate Tour'; (new bootstrap.Modal('#enquiryModal')).show(); }); });
+    document.addEventListener('submit',e=>{ if(e.target && e.target.id==='enquiryForm'){ e.preventDefault(); const name=enqName.value.trim(), email=enqEmail.value.trim(), phone=enqPhone.value.trim(), persons=enqPersons.value.trim(), date=enqDate.value.trim(), message=enqMessage.value.trim(); let ok=true; [[enqName,!!name],[enqEmail,isValidEmail(email)],[enqPhone,isValidPhone(phone)],[enqPersons,persons && parseInt(persons)>0],[enqDate,!!date]].forEach(t=>{ if(!t[1]){t[0].classList.add('error'); ok=false;} else t[0].classList.remove('error');}); if(!ok) return; const pkg=document.getElementById('enquiryPackage').value||'Kashmir Ultimate Tour'; const text=`Hello! I’d like to enquire about a package.%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Selected Package:* ${encodeURIComponent(pkg)}%0A*Number of Persons:* ${encodeURIComponent(persons)}%0A*Travel Date:* ${encodeURIComponent(date)}%0A*Message:* ${encodeURIComponent(message||'No additional queries.')}`; window.open(`https://wa.me/9318407221?text=${text}`,'_blank'); e.target.reset(); bootstrap.Modal.getInstance(document.getElementById('enquiryModal')).hide(); }});
+    ['enqName','enqEmail','enqPhone','enqPersons','enqDate'].forEach(id=>{const el=document.getElementById(id); if(!el) return; ['input','change','blur'].forEach(evt=>{el.addEventListener(evt,()=>{ if(el.value.trim()) el.classList.remove('error'); });});});
+  </script>
+</body>
+</html>
