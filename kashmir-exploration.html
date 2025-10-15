@@ -177,57 +177,21 @@
       filter: brightness(0) invert(1);
     }
 
-    /* ---------- PACKAGE HEADER ---------- */
-    .package-hero {
-      height: 400px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      margin-bottom: 30px;
-    }
-    
-    .package-hero::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
-    }
-    
-    .package-hero-content {
-      position: relative;
-      z-index: 2;
-      color: white;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 40px;
-    }
-    
-    .package-badge {
-      display: inline-block;
-      background: #007bff;
-      color: white;
-      padding: 5px 15px;
-      border-radius: 4px;
-      font-weight: 500;
-      margin-bottom: 15px;
-    }
-    
-    .package-meta {
-      display: flex;
-      gap: 20px;
-      margin-top: 10px;
-    }
-    
-    .package-meta span {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
+    /* ---------- PACKAGE HEADER (Delight-style) ---------- */
+    .package-header { margin-top: 10px; margin-bottom: 30px; }
+    .ph-card { background:#fff; border-radius: var(--card-radius); box-shadow:0 10px 30px rgba(2,49,33,0.08); overflow:hidden; border:1px solid rgba(2,49,33,0.06); }
+    .ph-left { padding:24px; }
+    .package-badge { display:inline-block; background:#ff5a5f; color:#fff; padding:6px 12px; border-radius:999px; font-weight:600; font-size:0.9rem; margin-bottom:12px; }
+    .package-title { margin:0 0 8px 0; }
+    .package-meta { display:flex; flex-wrap:wrap; gap:14px 20px; color:#35524a; margin:8px 0 14px 0; }
+    .package-meta span { display:inline-flex; align-items:center; gap:6px; }
+    .price-tag { display:inline-flex; align-items:center; gap:8px; background:#e8f2ee; color:#0b5137; padding:8px 12px; border-radius:10px; font-weight:700; margin-bottom:14px; }
+    .book-now-btn { display:inline-flex; align-items:center; gap:8px; background: var(--primary-color); color:#fff; padding:12px 18px; border-radius:10px; font-weight:700; text-decoration:none; border:none; }
+    .book-now-btn:hover { opacity:.92; color:#fff; }
+    .ph-right { background:#000; }
+    .ph-carousel img { width:100%; height:340px; object-fit:cover; display:block; }
+    .ph-caption { font-size:.9rem; color:#fff; background:rgba(0,0,0,0.35); padding:6px 10px; border-radius:8px; display:inline-block; }
+    @media (max-width: 767.98px){ .book-now-btn { position:sticky; bottom:8px; z-index:2; } .ph-carousel img { height:260px; } }
 
     /* ---------- PACKAGE DETAILS ---------- */
     .package-details {
@@ -356,6 +320,28 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       color: white;
     }
+    /* Sidebar Book Now button theme (matches floating button style) */
+    .cta-book-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--accent-color);
+      color: #fff;
+      border-radius: 50px;
+      padding: 12px 20px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+      transition: all 0.3s ease;
+    }
+    .cta-book-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+      background: #ff5252;
+      color: #fff;
+    }
     
     .highlight-tag {
       display: inline-block;
@@ -431,7 +417,7 @@
       font-weight: 600;
       box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
       border: none;
-      z-index: 999;
+      z-index: 9999;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -458,8 +444,9 @@
         box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
       }
     }
-    #enquiryModal .error-message { display:none; font-size:0.8rem; color:var(--accent-color); margin-top:4px; }
-    #enquiryModal .form-control.error + .error-message { display:block; }
+  #enquiryModal .error-message { display:none; font-size:0.8rem; color:var(--accent-color); margin-top:4px; }
+  #enquiryModal .form-control.error + .error-message,
+  #enquiryModal .form-select.error + .error-message { display:block; }
   </style>
 </head>
 <body>
@@ -487,20 +474,71 @@
     </div>
   </nav>
 
-  <!-- Package Hero -->
-  <div class="package-hero" style="background-image: url('data:image/jpeg;base64,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');">
+  <!-- Package Header: two-column layout (Delight-style) -->
+  <section class="package-header" aria-label="Package header">
     <div class="container">
-      <div class="package-hero-content">
-        <span class="package-badge">Premium</span>
-        <h1>Kashmir Exploration Package</h1>
-        <div class="package-meta">
-          <span><i class="fas fa-clock"></i> 6 Days / 5 Nights</span>
-          <span><i class="fas fa-users"></i> 2-8 People</span>
-          <span><i class="fas fa-star"></i> 4.7/5 Rating</span>
+      <div class="ph-card">
+        <div class="row g-0 align-items-stretch">
+          <!-- Left content -->
+          <div class="col-lg-7 ph-left">
+            <span class="package-badge" aria-label="Popular badge">Popular</span>
+            <h1 class="package-title">Kashmir Retreat Package</h1>
+            <div class="package-meta" aria-label="Package summary">
+              <span><i class="fas fa-clock" aria-hidden="true"></i> 6 Days / 5 Nights</span>
+              <span><i class="fas fa-users" aria-hidden="true"></i> 2–8 People</span>
+              <span><i class="fas fa-star" aria-hidden="true"></i> 4.7/5 Rating</span>
+            </div>
+            <div class="price-tag" aria-label="Starting price">Starting from ₹20,000 per person</div>
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="book-now-btn" href="#" data-enquiry-btn data-package="Kashmir Exploration Package" aria-label="Book Kashmir Exploration now" role="button">
+                <i class="fas fa-bolt" aria-hidden="true"></i> Book Now
+              </a>
+              <a class="btn btn-outline-success" href="#faqs" aria-label="Jump to FAQs">FAQs</a>
+            </div>
+            <p class="mt-3 mb-0" style="color:#35524a; font-size:0.95rem;">Includes stays, meals, private cab, curated sightseeing, and authentic experiences.</p>
+          </div>
+          <!-- Right gallery -->
+          <div class="col-lg-5 ph-right">
+            <div id="explorationGallery" class="carousel slide ph-carousel" data-bs-ride="carousel" aria-label="Package gallery carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#explorationGallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#explorationGallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#explorationGallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <picture>
+                    <img loading="lazy" decoding="async" alt="Dal Lake houseboats" src="Images/zoon4.jpg">
+                  </picture>
+                  <div class="carousel-caption d-none d-md-block">
+                    <span class="ph-caption">Dal Lake, Srinagar</span>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <picture>
+                    <img loading="lazy" decoding="async" alt="Gulmarg meadows" src="Images/zoon5.jpg">
+                  </picture>
+                </div>
+                <div class="carousel-item">
+                  <picture>
+                    <img loading="lazy" decoding="async" alt="Pahalgam valley" src="Images/zoon6.jpg">
+                  </picture>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#explorationGallery" data-bs-slide="prev" aria-label="Previous slide">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#explorationGallery" data-bs-slide="next" aria-label="Next slide">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Package Details -->
   <section class="package-details">
@@ -860,8 +898,55 @@
                   <div class="exclusion-item"><i class="fas fa-times-circle"></i> Travel Insurance</div>
                 </div>
                 
-                <a href="#" data-enquiry-btn data-package="Kashmir Exploration Package" class="btn btn-primary w-100">Book Now</a>
+                <div class="d-flex justify-content-center">
+                  <a href="#" data-enquiry-btn data-package="Kashmir Exploration Package" class="cta-book-btn"><i class="fas fa-book-open"></i> Book Now</a>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs" class="py-5" aria-label="Frequently Asked Questions">
+    <div class="container">
+      <h2 class="mb-4">Frequently Asked Questions</h2>
+      <div class="accordion" id="explorationFaqAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="exploration-q1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#exploration-a1" aria-expanded="true" aria-controls="exploration-a1">
+              What's included in this package?
+            </button>
+          </h3>
+          <div id="exploration-a1" class="accordion-collapse collapse show" aria-labelledby="exploration-q1" data-bs-parent="#explorationFaqAccordion">
+            <div class="accordion-body">
+              Airport transfers, 5 nights accommodation, daily breakfast and dinner, private cab for sightseeing as per itinerary, Shikara ride, and all taxes.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="exploration-q2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exploration-a2" aria-expanded="false" aria-controls="exploration-a2">
+              Can the itinerary be customized?
+            </button>
+          </h3>
+          <div id="exploration-a2" class="accordion-collapse collapse" aria-labelledby="exploration-q2" data-bs-parent="#explorationFaqAccordion">
+            <div class="accordion-body">
+              Yes, we can adjust stays, sightseeing, and pacing based on your preferences and travel month.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="exploration-q3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exploration-a3" aria-expanded="false" aria-controls="exploration-a3">
+              What's the best season to book?
+            </button>
+          </h3>
+          <div id="exploration-a3" class="accordion-collapse collapse" aria-labelledby="exploration-q3" data-bs-parent="#explorationFaqAccordion">
+            <div class="accordion-body">
+              Kashmir is great across seasons: spring blossoms, summer cool, autumn hues, and snowy winters—tell us your vibe and we’ll guide you.
             </div>
           </div>
         </div>
@@ -876,7 +961,7 @@
         <div class="col-lg-8 text-center">
           <h2>Ready for the Ultimate Kashmir Experience?</h2>
           <p>Book your Kashmir Exploration Package today and discover why Kashmir is truly heaven on earth.</p>
-          <a href="contact.html" class="cta-btn">
+          <a href="#" data-enquiry-btn data-package="Kashmir Exploration Package" class="cta-btn">
             Book Now <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -940,7 +1025,6 @@
         </div>
         <div class="modal-body">
           <form id="enquiryForm" novalidate>
-            <input type="hidden" id="enquiryPackage" />
             <div class="mb-3">
               <label for="enqName" class="form-label">Your Name</label>
               <input id="enqName" type="text" class="form-control" required aria-required="true">
@@ -955,6 +1039,17 @@
               <label for="enqPhone" class="form-label">Phone Number</label>
               <input id="enqPhone" type="tel" class="form-control" required aria-required="true">
               <div class="error-message">Please enter a valid phone number</div>
+            </div>
+            <div class="mb-3">
+              <label for="enqPackage" class="form-label">Package Selection</label>
+              <select class="form-select" id="enqPackage" required>
+                <option value="">Select a package</option>
+                <option value="Srinagar Classic">Kashmir Delight</option>
+                <option value="Gulmarg Adventure">Kashmir Tour Package</option>
+                <option value="Pahalgam Retreat">Kashmir Retreat</option>
+                <option value="Romantic Kashmir">Grand Kashmir Tour</option>
+              </select>
+              <div class="error-message">Please select a package</div>
             </div>
             <div class="row">
               <div class="col-md-6 mb-3">
@@ -983,10 +1078,15 @@
     function isValidEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);} 
     function isValidPhone(p){return /^[0-9+\-\s()]{10,}$/.test(p);} 
     document.querySelectorAll('[data-enquiry-btn]').forEach(btn=>{
-      btn.addEventListener('click',()=>{ document.getElementById('enquiryPackage').value = btn.getAttribute('data-package')||'Kashmir Package'; (new bootstrap.Modal('#enquiryModal')).show(); });
+      btn.addEventListener('click',()=>{ 
+        const title = btn.getAttribute('data-package')||'';
+        const map={ 'Kashmir Delight':'Srinagar Classic','Kashmir Tour Package':'Gulmarg Adventure','Kashmir Retreat':'Pahalgam Retreat','Grand Kashmir Tour':'Romantic Kashmir' };
+        const sel=document.getElementById('enqPackage'); if(sel){ sel.value = map[title]||''; }
+        (new bootstrap.Modal('#enquiryModal')).show(); 
+      });
     });
-    document.addEventListener('submit',function(e){ if(e.target && e.target.id==='enquiryForm'){ e.preventDefault(); const name=enqName.value.trim(), email=enqEmail.value.trim(), phone=enqPhone.value.trim(), persons=enqPersons.value.trim(), date=enqDate.value.trim(), message=enqMessage.value.trim(); let ok=true; [[enqName,!!name],[enqEmail,isValidEmail(email)],[enqPhone,isValidPhone(phone)],[enqPersons,persons && parseInt(persons)>0],[enqDate,!!date]].forEach(t=>{ if(!t[1]){t[0].classList.add('error'); ok=false;} else t[0].classList.remove('error');}); if(!ok) return; const pkg=document.getElementById('enquiryPackage').value||'Kashmir Exploration Package'; const text=`Hello! I’d like to enquire about a package.%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Selected Package:* ${encodeURIComponent(pkg)}%0A*Number of Persons:* ${encodeURIComponent(persons)}%0A*Travel Date:* ${encodeURIComponent(date)}%0A*Message:* ${encodeURIComponent(message||'No additional queries.')}`; window.open(`https://wa.me/9318407221?text=${text}`,'_blank'); e.target.reset(); bootstrap.Modal.getInstance(document.getElementById('enquiryModal')).hide(); }});
-    ['enqName','enqEmail','enqPhone','enqPersons','enqDate'].forEach(id=>{const el=document.getElementById(id); if(!el) return; ['input','change','blur'].forEach(evt=>{el.addEventListener(evt,()=>{ if(el.value.trim()) el.classList.remove('error'); });});});
+    document.addEventListener('submit',function(e){ if(e.target && e.target.id==='enquiryForm'){ e.preventDefault(); const name=enqName.value.trim(), email=enqEmail.value.trim(), phone=enqPhone.value.trim(), pkg=enqPackage.value, persons=enqPersons.value.trim(), date=enqDate.value.trim(), message=enqMessage.value.trim(); let ok=true; [[enqName,!!name],[enqEmail,isValidEmail(email)],[enqPhone,isValidPhone(phone)],[enqPackage,!!pkg],[enqPersons,persons && parseInt(persons)>0],[enqDate,!!date]].forEach(t=>{ if(!t[1]){t[0].classList.add('error'); ok=false;} else t[0].classList.remove('error');}); if(!ok) return; const labelMap={'Srinagar Classic':'Kashmir Delight','Gulmarg Adventure':'Kashmir Tour Package','Pahalgam Retreat':'Kashmir Retreat','Romantic Kashmir':'Grand Kashmir Tour'}; const pkgLabel=labelMap[pkg]||pkg||'Package Enquiry'; const text=`Hello! I’d like to enquire about a package.%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Selected Package:* ${encodeURIComponent(pkgLabel)}%0A*Number of Persons:* ${encodeURIComponent(persons)}%0A*Travel Date:* ${encodeURIComponent(date)}%0A*Message:* ${encodeURIComponent(message||'No additional queries.')}`; window.open(`https://wa.me/9318407221?text=${text}`,'_blank'); e.target.reset(); bootstrap.Modal.getInstance(document.getElementById('enquiryModal')).hide(); }});
+    ['enqName','enqEmail','enqPhone','enqPackage','enqPersons','enqDate'].forEach(id=>{const el=document.getElementById(id); if(!el) return; ['input','change','blur'].forEach(evt=>{el.addEventListener(evt,()=>{ if(el.value.trim()) el.classList.remove('error'); });});});
   </script>
 </body>
 </html>

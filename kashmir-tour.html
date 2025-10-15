@@ -420,6 +420,28 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       color: white;
     }
+    /* Sidebar Book Now button theme (matches floating button style) */
+    .cta-book-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--accent-color);
+      color: #fff;
+      border-radius: 50px;
+      padding: 12px 20px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+      transition: all 0.3s ease;
+    }
+    .cta-book-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+      background: #ff5252;
+      color: #fff;
+    }
     
     .highlight-tag {
       display: inline-block;
@@ -575,7 +597,7 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <picture>
-                    <img loading="lazy" decoding="async" alt="Dal Lake houseboats" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBONsGOenYyZrioMdTQ9bd5kaJtRU65dg_5A&s"/>
+                    <img loading="lazy" decoding="async" alt="Dal Lake houseboats" src="Images/zoon7.jpg"/>
                   </picture>
                   <div class="carousel-caption d-none d-md-block">
                     <span class="ph-caption">Dal Lake, Srinagar</span>
@@ -583,12 +605,12 @@
                 </div>
                 <div class="carousel-item">
                   <picture>
-                    <img loading="lazy" decoding="async" alt="Gulmarg meadows" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-3V6w9Bx8q1_ARP4UAcWttQKCcNuIr-Dikg&s"/>
+                    <img loading="lazy" decoding="async" alt="Gulmarg meadows" src="Images/zoon8.jpg"/>
                   </picture>
                 </div>
                 <div class="carousel-item">
                   <picture>
-                    <img loading="lazy" decoding="async" alt="Sonmarg valley" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBeHJ0Q86ErPbkwS4Q3Gbk3Cos0GFoLnWk3g&s"/>
+                    <img loading="lazy" decoding="async" alt="Sonmarg valley" src="Images/zoon9.jpg"/>
                   </picture>
                 </div>
               </div>
@@ -909,7 +931,9 @@
                   <div class="exclusion-item"><i class="fas fa-times-circle"></i> Travel Insurance</div>
                 </div>
                 
-                <a href="#" data-enquiry-btn data-package="Kashmir Tour Package" class="btn btn-primary w-100">Book Now</a>
+                <div class="d-flex justify-content-center">
+                  <a href="#" data-enquiry-btn data-package="Kashmir Tour Package" class="cta-book-btn"><i class="fas fa-book-open"></i> Book Now</a>
+                </div>
               </div>
             </div>
           </div>
@@ -970,7 +994,7 @@
         <div class="col-lg-8 text-center">
           <h2>Ready to Explore the Magic of Kashmir?</h2>
           <p>Book your Kashmir Tour Package today and immerse yourself in the breathtaking beauty of this paradise on earth.</p>
-          <a href="contact.html" class="cta-btn">
+          <a href="#" data-enquiry-btn data-package="Kashmir Tour Package" class="cta-btn">
             Book Now <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -997,11 +1021,9 @@
                         
                     </div>
                 </div>
-                <div class="col-md-2">
-                    <h5>Quick Links</h5>
-    #enquiryModal .error-message { display:none; font-size:0.8rem; color:var(--accent-color); margin-top:4px; }
-    #enquiryModal .form-control.error + .error-message { display:block; }
-                    <a href="index.html">Home</a>
+        <div class="col-md-2">
+          <h5>Quick Links</h5>
+          <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="packages.html">Packages</a>
                     <a href="destinations.html">Destinations</a>
@@ -1036,7 +1058,6 @@
         </div>
         <div class="modal-body">
           <form id="enquiryForm" novalidate>
-            <input type="hidden" id="enquiryPackage" name="packageName" />
             <div class="mb-3">
               <label for="enqName" class="form-label">Your Name</label>
               <input type="text" class="form-control" id="enqName" required aria-required="true" aria-describedby="enqNameErr">
@@ -1051,6 +1072,17 @@
               <label for="enqPhone" class="form-label">Phone Number</label>
               <input type="tel" class="form-control" id="enqPhone" required aria-required="true" aria-describedby="enqPhoneErr">
               <div id="enqPhoneErr" class="error-message">Please enter a valid phone number</div>
+            </div>
+            <div class="mb-3">
+              <label for="enqPackage" class="form-label">Package Selection</label>
+              <select class="form-select" id="enqPackage" required>
+                <option value="">Select a package</option>
+                <option value="Srinagar Classic">Kashmir Delight</option>
+                <option value="Gulmarg Adventure">Kashmir Tour Package</option>
+                <option value="Pahalgam Retreat">Kashmir Retreat</option>
+                <option value="Romantic Kashmir">Grand Kashmir Tour</option>
+              </select>
+              <div class="error-message">Please select a package</div>
             </div>
             <div class="row">
               <div class="col-md-6 mb-3">
@@ -1075,15 +1107,22 @@
       </div>
     </div>
   </div>
+  <style>
+    #enquiryModal .error-message { display: none; font-size: 0.85rem; color: var(--accent-color); margin-top: 5px; }
+    #enquiryModal .form-control.error + .error-message,
+    #enquiryModal .form-select.error + .error-message { display: block; }
+  </style>
   <script>
   function isValidEmail(email){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);} 
   function isValidPhone(p){return /^[0-9+\-\s()]{10,}$/.test(p);} 
   function attachEnquiryHandlers(){
     const modalEl = document.getElementById('enquiryModal');
-    const packageInput = document.getElementById('enquiryPackage');
+    const packageSelect = document.getElementById('enqPackage');
     document.querySelectorAll('[data-enquiry-btn]').forEach(btn=>{
       btn.addEventListener('click', ()=>{
-        packageInput.value = btn.getAttribute('data-package') || document.title || 'Kashmir Package';
+        const title = btn.getAttribute('data-package') || '';
+        const map={ 'Kashmir Delight':'Srinagar Classic','Kashmir Tour Package':'Gulmarg Adventure','Kashmir Retreat':'Pahalgam Retreat','Grand Kashmir Tour':'Romantic Kashmir' };
+        if(packageSelect){ packageSelect.value = map[title] || ''; }
         (new bootstrap.Modal(modalEl)).show();
       });
     });
@@ -1092,16 +1131,19 @@
   document.addEventListener('submit', function(e){
     if(e.target && e.target.id==='enquiryForm'){
       e.preventDefault();
-      const name=enqName.value.trim(), email=enqEmail.value.trim(), phone=enqPhone.value.trim(), persons=enqPersons.value.trim(), date=enqDate.value.trim(), message=enqMessage.value.trim();
+      const name=enqName.value.trim(), email=enqEmail.value.trim(), phone=enqPhone.value.trim(), pkg=enqPackage.value, persons=enqPersons.value.trim(), date=enqDate.value.trim(), message=enqMessage.value.trim();
       let ok=true; const tests=[[enqName,!!name],[enqEmail,isValidEmail(email)],[enqPhone,isValidPhone(phone)],[enqPersons,persons && parseInt(persons)>0],[enqDate,!!date]]; tests.forEach(t=>{if(!t[1]){t[0].classList.add('error'); ok=false;} else t[0].classList.remove('error');});
       if(!ok) return;
-      const pkg=document.getElementById('enquiryPackage').value||'Kashmir Package';
+      // validate package select
+      if(!pkg){ enqPackage.classList.add('error'); return; } else { enqPackage.classList.remove('error'); }
+      const labelMap={'Srinagar Classic':'Kashmir Delight','Gulmarg Adventure':'Kashmir Tour Package','Pahalgam Retreat':'Kashmir Retreat','Romantic Kashmir':'Grand Kashmir Tour'};
+      const pkgLabel = labelMap[pkg] || pkg || 'Package Enquiry';
       const whatsappNumber='9318407221';
-      const text=`Hello! I’d like to enquire about a package.%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Selected Package:* ${encodeURIComponent(pkg)}%0A*Number of Persons:* ${encodeURIComponent(persons)}%0A*Travel Date:* ${encodeURIComponent(date)}%0A*Message:* ${encodeURIComponent(message||'No additional queries.')}`;
+      const text=`Hello! I’d like to enquire about a package.%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Selected Package:* ${encodeURIComponent(pkgLabel)}%0A*Number of Persons:* ${encodeURIComponent(persons)}%0A*Travel Date:* ${encodeURIComponent(date)}%0A*Message:* ${encodeURIComponent(message||'No additional queries.')}`;
       window.open(`https://wa.me/${whatsappNumber}?text=${text}`,'_blank');
       e.target.reset();
       bootstrap.Modal.getInstance(document.getElementById('enquiryModal')).hide();
-    ['enqName','enqEmail','enqPhone','enqPersons','enqDate'].forEach(id=>{const el=document.getElementById(id); if(!el) return; ['input','change','blur'].forEach(evt=>{el.addEventListener(evt,()=>{ if(el.value.trim()) el.classList.remove('error'); });});});
+    ['enqName','enqEmail','enqPhone','enqPackage','enqPersons','enqDate'].forEach(id=>{const el=document.getElementById(id); if(!el) return; ['input','change','blur'].forEach(evt=>{el.addEventListener(evt,()=>{ if(el.value.trim()) el.classList.remove('error'); });});});
     }
   });
   </script>
