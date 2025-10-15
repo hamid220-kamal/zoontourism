@@ -64,7 +64,7 @@
       box-shadow: 0 4px 25px rgba(0,0,0,0.15);
       padding: 12px 0;
       border-bottom: 2px solid rgba(255,255,255,0.1);
-      z-index: 1100; /* ensure above all page content */
+      z-index: 1030; /* keep navbar below Bootstrap modals (modal: 1055) */
     }
 
     .navbar-brand {
@@ -336,6 +336,8 @@
     .form-control.error + .error-message {
       display: block;
     }
+    /* Hash-target post highlight */
+    .ig-highlight { outline: 3px solid #ff6b6b; outline-offset: 4px; box-shadow: 0 0 0 6px rgba(255,107,107,0.25); border-radius: 16px; }
     
     @media (max-width: 768px) {
       .hero-fullwidth {
@@ -2078,8 +2080,8 @@
         const copyBtn = card.querySelector('.ig-share-panel .copy');
         const closeBtn = card.querySelector('.ig-share-panel .close-share');
         function openShare(){
-          // Always use clean root URL (domain/) plus anchor for consistent sharing
-          const url = window.location.origin + '/#' + card.id;
+          // Build a full URL that works on GitHub Pages project sites and custom domains
+          const url = new URL('#' + card.id, window.location.href).href;
           shareInput.value = url;
           backdrop.classList.add('show');
           panel.classList.add('show');
@@ -2122,6 +2124,24 @@
     // Build feeds after DOM loaded
   document.addEventListener('DOMContentLoaded', buildInstaFeeds);
 
+  </script>
+
+  <script>
+    // Support deep-links like .../#post-1 by scrolling to the card and highlighting it
+    document.addEventListener('DOMContentLoaded', function(){
+      const hash = window.location.hash && window.location.hash.substring(1);
+      if(hash){
+        const target = document.getElementById(hash);
+        if(target){
+          // small delay to ensure layout is ready
+          setTimeout(()=>{
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            target.classList.add('ig-highlight');
+            setTimeout(()=> target.classList.remove('ig-highlight'), 1600);
+          }, 250);
+        }
+      }
+    });
   </script>
 
   <!-- Bootstrap JS for Modal (already loaded above) -->
