@@ -438,6 +438,14 @@
     /* Enquiry modal validation messaging */
   #enquiryModal .error-message { display:none; font-size:0.8rem; color:var(--accent-color); margin-top:4px; }
   #enquiryModal .form-control.error + .error-message, #enquiryModal .form-select.error + .error-message { display:block; }
+  /* Mobile navbar compact sizing (global) */
+  @media (max-width: 991px){
+    .navbar{ padding: 6px 0 !important; }
+    .navbar-brand{ margin-right: 10px !important; }
+    .navbar-brand img{ height: 48px !important; width: auto !important; }
+    .navbar-toggler{ padding: 6px 8px !important; border-width: 1.5px !important; }
+    .navbar-toggler-icon{ width: 20px !important; height: 20px !important; }
+  }
   </style>
 </head>
 <body>

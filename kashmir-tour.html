@@ -203,19 +203,29 @@
 
     /* Mobile menu improvements */
     @media (max-width: 991px) {
+      .navbar {
+        /* Disable heavy blur for performance on mobile */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      }
       .navbar-collapse {
         background: rgba(2, 49, 33, 0.98);
         border-radius: 0 0 15px 15px;
         padding: 20px;
         box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         margin-top: 10px;
+        max-height: 70vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
       }
       
       .nav-link {
         padding: 15px;
         border-radius: 8px;
         margin: 5px 0;
-        transition: all 0.2s ease;
+        transition: background-color 0.2s ease;
+        color: #fff !important;
       }
       
       .nav-link:hover {
@@ -536,6 +546,16 @@
       0% { box-shadow: 0 0 0 0 rgba(255,107,107,0.7); }
       70% { box-shadow: 0 0 0 10px rgba(255,107,107,0); }
       100% { box-shadow: 0 0 0 0 rgba(255,107,107,0); }
+    }
+  </style>
+  <style>
+    /* Mobile navbar compact sizing (global) */
+    @media (max-width: 991px){
+      .navbar{ padding: 6px 0 !important; }
+      .navbar-brand{ margin-right: 10px !important; }
+      .navbar-brand img{ height: 48px !important; width: auto !important; }
+      .navbar-toggler{ padding: 6px 8px !important; border-width: 1.5px !important; }
+      .navbar-toggler-icon{ width: 20px !important; height: 20px !important; }
     }
   </style>
 </head>
@@ -1048,6 +1068,18 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Close collapsed navbar on link tap (mobile)
+    document.addEventListener('DOMContentLoaded', function(){
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const navLinks = document.querySelectorAll('.nav-link');
+      if(navbarCollapse && navLinks.length){
+        navLinks.forEach(link => link.addEventListener('click', function(){
+          if(window.innerWidth <= 991){ try { new bootstrap.Collapse(navbarCollapse).hide(); } catch(e){} }
+        }));
+      }
+    });
+  </script>
   <!-- Enquiry Modal (shared) -->
   <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">

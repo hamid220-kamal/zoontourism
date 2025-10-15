@@ -446,6 +446,24 @@ img {
         border-radius: 5px;
     }
 }
+    /* Mobile navbar compact sizing (global) */
+    @media (max-width: 991px){
+        .navbar{ padding: 6px 0 !important; }
+        .navbar-brand{ margin-right: 10px !important; }
+        .navbar-brand img{ height: 48px !important; width: auto !important; }
+        .navbar-toggler{ padding: 6px 8px !important; border-width: 1.5px !important; }
+        .navbar-toggler-icon{ width: 20px !important; height: 20px !important; }
+    }
+            </style>
+    <style>
+    /* Mobile navbar performance + contrast */
+    @media (max-width: 991px){
+        .navbar { backdrop-filter: none; -webkit-backdrop-filter: none; box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+        .navbar-collapse { background: rgba(2,49,33,0.98); border-radius: 12px; padding: 16px; margin-top:10px; max-height:70vh; overflow-y:auto; -webkit-overflow-scrolling: touch; }
+        .nav-link { color:#fff !important; padding:14px; border-radius:8px; margin:5px 0; transition: background-color 0.2s ease; }
+        .nav-link:hover { background: rgba(255,255,255,0.1); transform: none; }
+        .nav-link::after { display:none; }
+    }
     </style>
 </head>
 <body>
@@ -625,7 +643,21 @@ img {
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Close navbar on link tap (mobile)
+            document.addEventListener('DOMContentLoaded', function(){
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                const navLinks = document.querySelectorAll('.nav-link');
+                if(navbarCollapse && navLinks.length){
+                    navLinks.forEach(link => link.addEventListener('click', function(){
+                        if(window.innerWidth <= 991){
+                            try { new bootstrap.Collapse(navbarCollapse).hide(); } catch(e){}
+                        }
+                    }));
+                }
+            });
+        </script>
     <script>
         // Language Toggle
         let currentLang = 'EN';

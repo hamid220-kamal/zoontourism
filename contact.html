@@ -109,19 +109,29 @@
         
         /* Mobile menu improvements */
         @media (max-width: 991px) {
+            .navbar {
+                /* Disable heavy blur for performance on mobile */
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            }
             .navbar-collapse {
                 background: rgba(2, 49, 33, 0.98);
                 border-radius: 0 0 15px 15px;
                 padding: 20px;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.2);
                 margin-top: 10px;
+                max-height: 70vh;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
             }
             
             .nav-link {
                 padding: 15px;
                 border-radius: 8px;
                 margin: 5px 0;
-                transition: all 0.2s ease;
+                transition: background-color 0.2s ease;
+                color: #fff !important;
             }
             
             .nav-link:hover {
@@ -223,6 +233,10 @@
             border-color: var(--accent-color);
             animation: shake 0.5s;
         }
+        .form-select.error {
+            border-color: var(--accent-color);
+            animation: shake 0.5s;
+        }
 
         .error-message {
             color: var(--accent-color);
@@ -231,7 +245,8 @@
             display: none;
         }
 
-        .form-control.error + .error-message {
+        .form-control.error + .error-message,
+        .form-select.error + .error-message {
             display: block;
         }
 
@@ -494,7 +509,15 @@ img {
             font-weight: bold;
             margin: 15px 0;
         }
-    </style>
+/* Mobile navbar compact sizing (global) */
+@media (max-width: 991px){
+    .navbar{ padding: 6px 0 !important; }
+    .navbar-brand{ margin-right: 10px !important; }
+    .navbar-brand img{ height: 48px !important; width: auto !important; }
+    .navbar-toggler{ padding: 6px 8px !important; border-width: 1.5px !important; }
+    .navbar-toggler-icon{ width: 20px !important; height: 20px !important; }
+}
+        </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -702,7 +725,21 @@ img {
         <i class="fas fa-check-circle me-2"></i> Your message has been sent successfully!
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+        // Close the collapsed navbar when a link is tapped on mobile
+        document.addEventListener('DOMContentLoaded', function(){
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navLinks = document.querySelectorAll('.nav-link');
+            if(navbarCollapse && navLinks.length){
+                navLinks.forEach(link => link.addEventListener('click', function(){
+                    if(window.innerWidth <= 991){
+                        try { new bootstrap.Collapse(navbarCollapse).hide(); } catch(e){}
+                    }
+                }));
+            }
+        });
+        </script>
     <script>
         
         // Form Validation and Submission
@@ -826,6 +863,18 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     window.open(whatsappURL, "_blank");
 });
 </script>
+        <script>
+        // Clear error styling as user interacts with fields
+        document.addEventListener('DOMContentLoaded', function(){
+            ['name','email','phone','package','persons','travelDate'].forEach(function(id){
+                var el = document.getElementById(id);
+                if(!el) return;
+                ['input','change','blur'].forEach(function(evt){
+                    el.addEventListener(evt, function(){ el.classList.remove('error'); });
+                });
+            });
+        });
+        </script>
 
 </body>
 </html>
