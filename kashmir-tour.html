@@ -304,6 +304,50 @@
     }
 
     /* ---------- PACKAGE DETAILS ---------- */
+    .pkg-section {
+      margin: 40px 0 30px 0;
+      padding: 32px 24px;
+      background: #fff;
+      border-radius: var(--card-radius);
+      box-shadow: 0 10px 30px rgba(2,49,33,0.05);
+      border: 1px solid rgba(2,49,33,0.06);
+    }
+    .pkg-section h2, .pkg-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 18px;
+    }
+    .pkg-section ul {
+      margin-bottom: 18px;
+      padding-left: 22px;
+    }
+    .pkg-section li {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: #0b2130;
+    }
+    .pkg-note {
+      background: #f6f8f7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.98rem;
+      color: #35524a;
+      margin-bottom: 18px;
+      border-left: 4px solid var(--primary-color);
+    }
+    @media (max-width: 767.98px) {
+      .pkg-section {
+        padding: 18px 8px;
+      }
+      .pkg-section h2, .pkg-section h3 {
+        font-size: 1.2rem;
+      }
+      .pkg-note {
+        padding: 10px 8px;
+        font-size: 0.95rem;
+      }
+    }
     .package-details {
       padding: 50px 0;
     }
@@ -590,21 +634,21 @@
         <div class="row g-0 align-items-stretch">
           <!-- Left content -->
           <div class="col-lg-7 ph-left">
-            <span class="package-badge" aria-label="Popular badge">Popular</span>
-            <h1 class="package-title">Kashmir Tour Package</h1>
+            <span class="package-badge" aria-label="Best Seller badge">Best Seller</span>
+            <h1 class="package-title">Admirable Kashmir – 4 Nights / 5 Days</h1>
             <div class="package-meta" aria-label="Package summary">
               <span><i class="fas fa-clock" aria-hidden="true"></i> 5 Days / 4 Nights</span>
               <span><i class="fas fa-users" aria-hidden="true"></i> 2–8 People</span>
-              <span><i class="fas fa-star" aria-hidden="true"></i> 4.0/5 Rating</span>
+              <span><i class="fas fa-star" aria-hidden="true"></i> 4.5/5 Rating</span>
             </div>
-            <div class="price-tag" aria-label="Starting price">Starting from ₹16,000 per person</div>
+            <div class="price-tag" aria-label="Starting price">See hotel category tables below for exact rates</div>
             <div class="d-flex gap-2 flex-wrap">
-              <a class="book-now-btn" href="#" data-enquiry-btn data-package="Kashmir Tour Package" aria-label="Book Kashmir Tour Package now" role="button">
-                <i class="fas fa-bolt" aria-hidden="true"></i> Book Now
+              <a class="book-now-btn" href="#" data-enquiry-btn data-package="Admirable Kashmir" aria-label="Book Admirable Kashmir now" role="button">
+                Book Now <i class="fas fa-arrow-right"></i>
               </a>
               <a class="btn btn-outline-success" href="#faqs" aria-label="Jump to FAQs">FAQs</a>
             </div>
-            <p class="mt-3 mb-0" style="color:#35524a; font-size:0.95rem;">Includes stays, meals, private cab, and Shikara ride.</p>
+            <p class="mt-3 mb-0" style="color:#35524a; font-size:0.95rem;">3 Nights in Srinagar Hotel + 1 Night in Srinagar Houseboat (MAPAI plan: breakfast + dinner).</p>
           </div>
           <!-- Right gallery -->
           <div class="col-lg-5 ph-right">
@@ -654,258 +698,255 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <h2>Discover the Magic of Kashmir</h2>
-          <p class="lead mb-4">
-            Our 5-day Kashmir Tour Package takes you on a comprehensive journey through the stunning landscapes and rich cultural heritage of Kashmir. From the serene Dal Lake to the breathtaking valleys of Gulmarg and Sonmarg, experience the best that Kashmir has to offer.
-          </p>
-
-          <!-- Day Cards -->
-          <h3 class="mt-5 mb-4">Detailed Itinerary</h3>
-          
+          <h2 class="mb-4">Detailed Itinerary — Admirable Kashmir (4N–5D)</h2>
           <div class="day-card">
-            <div class="day-header">
-              <h4 class="mb-0">Day 1: Arrival in Srinagar</h4>
-            </div>
+            <div class="day-header">Day 1: Arrival Day – Srinagar</div>
             <div class="day-content">
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-plane-arrival"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Airport Pickup</h5>
-                  <p>Warm welcome at Srinagar International Airport by our representative who will assist with your transfer to the hotel/houseboat.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-plane-arrival"></i></span>
+                <div>
+                  <div class="activity-title">Airport Pickup</div>
+                  <div class="activity-desc">Upon arrival at Srinagar Airport, meet our representative and transfer to your hotel.</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-home"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Check-in</h5>
-                  <p>Check into your hotel or premium houseboat on Dal Lake, depending on your booking preference.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-tree"></i></span>
+                <div>
+                  <div class="activity-title">Mughal Gardens</div>
+                  <div class="activity-desc">Visit Chashma Shahi, Shalimar Bagh, and Nishat Bagh.</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-ship"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Evening Shikara Ride</h5>
-                  <p>Enjoy a relaxing Shikara ride on the famous Dal Lake, witnessing the floating gardens and local life on the lake.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-mountain"></i></span>
+                <div>
+                  <div class="activity-title">Shankaracharya Temple</div>
+                  <div class="activity-desc">Panoramic city views from the temple.</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-utensils"></i>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-store"></i></span>
+                <div>
+                  <div class="activity-title">Handicraft Showroom</div>
+                  <div class="activity-desc">Explore Kashmiri carpets and shawls.</div>
                 </div>
-                <div class="activity-details">
-                  <h5>Dinner</h5>
-                  <p>Enjoy a delicious welcome dinner with authentic Kashmiri flavors at your accommodation.</p>
+              </div>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-water"></i></span>
+                <div>
+                  <div class="activity-title">Shikara Ride</div>
+                  <div class="activity-desc">Enjoy a 1-hour Shikara ride on Dal Lake.</div>
+                </div>
+              </div>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-utensils"></i></span>
+                <div>
+                  <div class="activity-title">Dinner & Overnight</div>
+                  <div class="activity-desc">Return to hotel for dinner and overnight stay.</div>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="day-card">
-            <div class="day-header">
-              <h4 class="mb-0">Day 2: Srinagar City Tour</h4>
-            </div>
+            <div class="day-header">Day 2: Sonmarg Day Trip</div>
             <div class="day-content">
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-coffee"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Breakfast</h5>
-                  <p>Start your day with a hearty breakfast at your accommodation.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-car"></i></span>
+                <div>
+                  <div class="activity-title">Drive to Sonmarg</div>
+                  <div class="activity-desc">After breakfast, drive to Sonmarg (“Meadow of Gold”), 84 km from Srinagar.</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-tree"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Mughal Gardens Tour</h5>
-                  <p>Visit the famous Mughal Gardens including Nishat Bagh (Garden of Pleasure), Shalimar Bagh (Garden of Love), and Chashme Shahi (Royal Spring), featuring terraced lawns, cascading fountains, and flowerbeds.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-mountain"></i></span>
+                <div>
+                  <div class="activity-title">Thajiwas Glacier</div>
+                  <div class="activity-desc">Visit Thajiwas Glacier (pony ride optional) and enjoy snow-capped mountain views.</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-mosque"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Historical Sites</h5>
-                  <p>Visit the sacred Hazratbal Shrine, known for its pristine white marble architecture, and the ancient Shankaracharya Temple offering panoramic views of the city.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-camera"></i></span>
+                <div>
+                  <div class="activity-title">Zero Point</div>
+                  <div class="activity-desc">Explore Zero Point if time permits.</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-store"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Local Market Visit</h5>
-                  <p>Explore the local markets for traditional Kashmiri handicrafts including pashmina shawls, wood carvings, and carpets.</p>
-                </div>
-              </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-utensils"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Return to Accommodation</h5>
-                  <p>Return to your accommodation for dinner and overnight stay.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-utensils"></i></span>
+                <div>
+                  <div class="activity-title">Dinner & Overnight</div>
+                  <div class="activity-desc">Return to Srinagar hotel for dinner and overnight stay.</div>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="day-card">
-            <div class="day-header">
-              <h4 class="mb-0">Day 3: Gulmarg Excursion</h4>
-            </div>
+            <div class="day-header">Day 3: Gulmarg Day Trip</div>
             <div class="day-content">
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-coffee"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Early Breakfast</h5>
-                  <p>Start your day with an early breakfast at your accommodation.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-car"></i></span>
+                <div>
+                  <div class="activity-title">Drive to Gulmarg</div>
+                  <div class="activity-desc">After breakfast, head toward Gulmarg (51 km, 1–1.5 hrs). Enjoy views from Tangmarg to Gulmarg.</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-car"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Drive to Gulmarg</h5>
-                  <p>Embark on a scenic 2-hour drive to Gulmarg, also known as the 'Meadow of Flowers', situated at an altitude of 8,700 ft.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-cable-car"></i></span>
+                <div>
+                  <div class="activity-title">Gondola Ride / Trek</div>
+                  <div class="activity-desc">Optional Gondola cable car ride to Kongdori or trek to Khilanmarg (3–4 hrs).</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-cable-car"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Gondola Ride</h5>
-                  <p>Experience the world's second highest operating cable car, offering stunning views of snow-capped mountains (optional, tickets not included).</p>
-                </div>
-              </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-hiking"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Leisure Activities</h5>
-                  <p>Enjoy leisure activities such as golf, pony riding, or simply taking in the beautiful mountain views.</p>
-                </div>
-              </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-utensils"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Return to Srinagar</h5>
-                  <p>Return to your accommodation in Srinagar for dinner and overnight stay.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-utensils"></i></span>
+                <div>
+                  <div class="activity-title">Dinner & Overnight</div>
+                  <div class="activity-desc">Return to Srinagar for overnight stay.</div>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="day-card">
-            <div class="day-header">
-              <h4 class="mb-0">Day 4: Sonmarg Excursion</h4>
-            </div>
+            <div class="day-header">Day 4: Pahalgam Day Trip</div>
             <div class="day-content">
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-coffee"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Early Breakfast</h5>
-                  <p>Enjoy an early breakfast before your day trip.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-car"></i></span>
+                <div>
+                  <div class="activity-title">Transfer to Pahalgam</div>
+                  <div class="activity-desc">After breakfast, transfer to Pahalgam (“Valley of Shepherds”).</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-car"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Drive to Sonmarg</h5>
-                  <p>Embark on a scenic 3-hour drive to Sonmarg, also known as the 'Meadow of Gold', located at an altitude of 9,200 ft.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-horse"></i></span>
+                <div>
+                  <div class="activity-title">Pony Rides / River Walks</div>
+                  <div class="activity-desc">Enjoy scenic drives, optional pony rides to Chandanwadi, or peaceful river walks.</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-mountain"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Thajiwas Glacier</h5>
-                  <p>Visit the magnificent Thajiwas Glacier (horseback ride optional, fee not included), surrounded by snow-capped mountains.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-hiking"></i></span>
+                <div>
+                  <div class="activity-title">Amarnath Pilgrimage</div>
+                  <div class="activity-desc">Pahalgam also serves as the base for the Amarnath pilgrimage.</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-camera"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Photography</h5>
-                  <p>Capture the breathtaking landscapes of meadows, lakes, and glaciers.</p>
-                </div>
-              </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-utensils"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Return to Srinagar</h5>
-                  <p>Return to your accommodation in Srinagar for dinner and overnight stay.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-ship"></i></span>
+                <div>
+                  <div class="activity-title">Houseboat Stay</div>
+                  <div class="activity-desc">Return to Srinagar and check into the houseboat for overnight stay.</div>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="day-card">
-            <div class="day-header">
-              <h4 class="mb-0">Day 5: Departure</h4>
-            </div>
+            <div class="day-header">Day 5: Departure</div>
             <div class="day-content">
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-coffee"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Breakfast</h5>
-                  <p>Enjoy your final breakfast at your accommodation.</p>
+              <div class="activity"><span class="activity-icon"><i class="fas fa-plane-departure"></i></span>
+                <div>
+                  <div class="activity-title">Departure</div>
+                  <div class="activity-desc">After breakfast, transfer to Srinagar Airport for your onward journey.</div>
                 </div>
               </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-store"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Last-Minute Shopping</h5>
-                  <p>Time permitting, do some last-minute shopping for souvenirs.</p>
-                </div>
-              </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-check-circle"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Check-out</h5>
-                  <p>Complete the check-out formalities from your accommodation.</p>
-                </div>
-              </div>
-              <div class="activity">
-                <div class="activity-icon">
-                  <i class="fas fa-car"></i>
-                </div>
-                <div class="activity-details">
-                  <h5>Airport Transfer</h5>
-                  <p>Transfer to Srinagar International Airport for your onward journey with cherished memories of Kashmir.</p>
-                </div>
-              </div>
+            </div>
+          </div>
+          <!-- Hotel Category & Cost Tables -->
+          <section class="pkg-section">
+            <div class="day-card" style="margin-bottom:32px;">
+              <div class="day-header" style="border-radius:14px 14px 0 0;">Hotel Category & Per-Person Cost</div>
+              <div class="day-content" style="padding:0;">
+            <h3>STANDARD HOTELS — Per Person Cost</h3>
+            <ul>
+              <li>@INR 16,000/- — 01 DELUXE ROOM FOR 02 PAX</li>
+              <li>@INR 13,300/- — 02 DELUXE ROOM FOR 04 PAX</li>
+              <li>@INR 11,450/- — 02 TRIPLE ROOM FOR 06 PAX</li>
+              <li>@INR 12,100/- — 03 TRIPLE ROOM FOR 09 PAX</li>
+              <li>@INR 11,400/- — 04 TRIPLE ROOM FOR 12 PAX</li>
+            </ul>
+            <div class="pkg-note">
+              (03 Nights in Srinagar: Hotel Star of Kashmir / Seven Seasons / Kashmir Palace / The Baytt / Rose Line Inn / New Classic Resorts / Petals of Chinar / Hotel Casa / similar)<br>
+              (01 Night in Houseboat: Badami / New Ashoka Houseboat)<br>
+              (Meal Plan: MAPAI — Daily buffet breakfast + Dinner)
+            </div>
+            <h3>3 STAR HOTELS — Per Person Cost</h3>
+            <ul>
+              <li>@INR 19,050/- — 01 DELUXE ROOM FOR 02 PAX</li>
+              <li>@INR 16,150/- — 02 DELUXE ROOM FOR 04 PAX</li>
+              <li>@INR 14,160/- — 02 TRIPLE ROOM FOR 06 PAX</li>
+              <li>@INR 15,000/- — 03 TRIPLE ROOM FOR 09 PAX</li>
+              <li>@INR 14,300/- — 04 TRIPLE ROOM FOR 12 PAX</li>
+            </ul>
+            <div class="pkg-note">
+              (03 Nights in Srinagar: Hotel Mehtab Palace / Blossom / Sideeq Palace / Grand Zamin / German Residency / Prince Residency / Grand Alden / similar)<br>
+              (01 Night in Houseboat: Kotroo Palace / Dawn / Akbar Heritage Houseboat)<br>
+              (Meal Plan: MAPAI — Daily buffet breakfast + Dinner)
+            </div>
+            <h3>3 STAR PREMIUM HOTELS — Per Person Cost</h3>
+            <ul>
+              <li>@INR 23,000/- — 01 DELUXE ROOM FOR 02 PAX</li>
+              <li>@INR 20,200/- — 02 DELUXE ROOM FOR 04 PAX</li>
+              <li>@INR 17,700/- — 02 TRIPLE ROOM FOR 06 PAX</li>
+              <li>@INR 18,200/- — 03 TRIPLE ROOM FOR 09 PAX</li>
+              <li>@INR 17,750/- — 04 TRIPLE ROOM FOR 12 PAX</li>
+            </ul>
+            <div class="pkg-note">
+              (03 Nights in Srinagar: Hotel Firdous / Grand Retreat / Kareem Residency / Royal Batoo / similar)<br>
+              (01 Night in Houseboat: Peacock / Morcopolo / Crown Palace Houseboat)<br>
+              (Meal Plan: MAPAI — Daily buffet breakfast + Dinner)
+            </div>
+          </section>
+          <!-- Cost Includes -->
+          <div class="day-card">
+            <div class="day-header">Cost Includes</div>
+            <div class="day-content">
+              <ul>
+                <li>Welcome Drink on Arrival</li>
+                <li>Breakfast & Dinner included for 04 Days</li>
+                <li>24x7 Support</li>
+                <li>01 Hour Shikara Ride in Dal Lake</li>
+                <li>Transport Services as per the itinerary</li>
+                <li>01 Hygienic Cab (Sedan/Tavera/Tempo Traveller) with Professional Driver</li>
+                <li>Pick up & Drop from Srinagar Airport</li>
+                <li>Driver’s Allowance, Parking, Toll Taxes</li>
+                <li>Free use of Internet</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Cost Excludes -->
+          <div class="day-card">
+            <div class="day-header">Cost Excludes</div>
+            <div class="day-content">
+              <ul>
+                <li>Personal expenses (tips, laundry, telephone, table drinks, etc.)</li>
+                <li>Garden entry fee (starts from ₹50)</li>
+                <li>Internal Airfare</li>
+                <li>Gondola Ride</li>
+                <li>Union cabs, Pony Rides, or chain vehicles in Gulmarg / Pahalgam / Sonmarg (₹2500–₹5000)</li>
+                <li>Any services not listed in inclusions.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Important Note -->
+          <div class="day-card">
+            <div class="day-header">Important Note</div>
+            <div class="day-content">
+              <ul>
+                <li>The above given cost is calculated on the basis of Above-mentioned selected hotels or Hotels falling in Same mentioned category of rooms.</li>
+                <li>In case rooms in the above said hotels are not available at the time of booking then we will offer a hotel of the same category and the costing is subject to change as per the rates & availability of rooms.</li>
+                <li>Please note that this is our offer letter, and we do not hold any rooms in the above-mentioned hotel as of now.</li>
+                <li>The booking process will be started upon your receipt of your confirmation.</li>
+                <li>Miss Commitment of the payment release during tour has to bear the penalty.</li>
+                <li>Supplement “Mandatory Dinner” will be charged extra during festivals / fairs. Standard check-in time 1400 hrs. & check-out time 1200 noon</li>
+                <li>All tourists are advised to take comprehensive Insurance on their own and Airport Shuttle for all Airport Transfers.</li>
+                <li>All expenses which are not included in the cost of the package shall be paid directly by tourists at the time of checkout.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Procedure for Booking -->
+          <div class="day-card">
+            <div class="day-header">Procedure for Booking</div>
+            <div class="day-content">
+              <ul>
+                <li>Written confirmation required.</li>
+                <li>25–40% advance payment to confirm booking.</li>
+                <li>Full payment on the day of arrival.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Cancellation by Customer -->
+          <div class="day-card">
+            <div class="day-header">Cancellation by Customer</div>
+            <div class="day-content">
+              <ul>
+                <li>Cancellation more than 30 days before departure: 100% refund of the total package cost. Only a nominal cancellation fee (usually 5%) will be deducted.</li>
+                <li>Cancellation between 20-30 days before departure: 90% refund of the total package cost.</li>
+                <li>Cancellation between 7-14 days before departure: 50% refund of the total package cost. Since hotels, transportation, and activities will likely have already been booked, 50% of the cost will be non-refundable.</li>
+                <li>Cancellation less than 7 days before departure: No refund. In this case, full payment is considered non-refundable, as most arrangements would have been finalized by this stage.</li>
+                <li>No show or same-day cancellation: No refund will be provided if the client fails to show up on the day of the trip or cancels on the day of travel.</li>
+                <li>No Refund if Cancelled Within One week of Arrival.</li>
+              </ul>
             </div>
           </div>
         </div>
