@@ -594,6 +594,8 @@
     .navbar-toggler-icon{ width: 20px !important; height: 20px !important; }
   }
   </style>
+</head>
+<body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -760,7 +762,7 @@
                   <span class="activity-icon"><i class="fas fa-car"></i></span>
                   <div>
                     <div class="activity-title">Transfer to Pahalgam</div>
-                    <div class="activity-desc">Drive to Pahalgam (“Valley of Shepherds”).</div>
+                    <div class="activity-desc">Drive to Pahalgam ("Valley of Shepherds").</div>
                   </div>
                 </div>
                 <div class="activity">
@@ -859,7 +861,7 @@
                   <li>Transport Services as per the itinerary</li>
                   <li>01 Hygienic Cab (Sedan car/Tavera/Tempo Traveller) with Professional Driver</li>
                   <li>Pick up & Drop from Srinagar Airport</li>
-                  <li>Driver’s allowance</li>
+                  <li>Driver's allowance</li>
                   <li>Parking charge</li>
                   <li>Free use of Internet</li>
                   <li>All Toll Taxes</li>
@@ -894,7 +896,7 @@
                   <li>Please note that this is our offer letter, and we do not hold any rooms in the above-mentioned hotel as of now.</li>
                   <li>The booking process will be started upon your receipt of your confirmation.</li>
                   <li>Miss Commitment of the payment release during tour has to bear the penalty.</li>
-                  <li>Supplement “Mandatory Dinner” will be charged extra during festivals / fairs. Standard check-in time 1400 hrs. & check-out time 1200 noon</li>
+                  <li>Supplement "Mandatory Dinner" will be charged extra during festivals / fairs. Standard check-in time 1400 hrs. & check-out time 1200 noon</li>
                   <li>All tourists are advised to take comprehensive Insurance on their own and Airport Shuttle for all Airport Transfers.</li>
                   <li>All expenses which are not included in the cost of the package shall be paid directly by tourists at the time of checkout.</li>
                 </ul>
@@ -1110,10 +1112,10 @@
               <label for="enqPackage" class="form-label">Package Selection</label>
               <select class="form-select" id="enqPackage" required>
                 <option value="">Select a package</option>
-                <option value="Srinagar Classic">Kashmir Delight</option>
-                <option value="Gulmarg Adventure">Kashmir Tour Package</option>
-                <option value="Pahalgam Retreat">Kashmir Retreat</option>
-                <option value="Romantic Kashmir">Grand Kashmir Tour</option>
+                <option value="Kashmir Delight">Kashmir Delight</option>
+                <option value="Admirable Kashmir">Admirable Kashmir</option>
+                <option value="Kashmir Retreat">Kashmir Retreat</option>
+                <option value="Grand Kashmir Tour">Grand Kashmir Tour</option>
               </select>
               <div class="error-message">Please select a package</div>
             </div>
@@ -1141,5 +1143,80 @@
     </div>
   </div>
   <script>
+    // Enquiry form handling
+    document.addEventListener('DOMContentLoaded', function() {
+      // Enquiry button click handlers
+      const enquiryButtons = document.querySelectorAll('[data-enquiry-btn]');
+      enquiryButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const packageName = this.getAttribute('data-package');
+          document.getElementById('enqPackage').value = packageName;
+          const modal = new bootstrap.Modal(document.getElementById('enquiryModal'));
+          modal.show();
+        });
+      });
+
+      // Form validation and submission
+      const enquiryForm = document.getElementById('enquiryForm');
+      enquiryForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Basic validation
+        let isValid = true;
+        const requiredFields = enquiryForm.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            field.classList.add('error');
+            isValid = false;
+          } else {
+            field.classList.remove('error');
+          }
+        });
+        
+        // Email validation
+        const emailField = document.getElementById('enqEmail');
+        if (emailField.value && !/^\S+@\S+\.\S+$/.test(emailField.value)) {
+          emailField.classList.add('error');
+          isValid = false;
+        }
+        
+        if (isValid) {
+          // Get form data
+          const name = document.getElementById('enqName').value;
+          const email = document.getElementById('enqEmail').value;
+          const phone = document.getElementById('enqPhone').value;
+          const package = document.getElementById('enqPackage').value;
+          const persons = document.getElementById('enqPersons').value;
+          const date = document.getElementById('enqDate').value;
+          const message = document.getElementById('enqMessage').value;
+          
+          // Create WhatsApp message
+          const whatsappMessage = `Hello ZoonTourism,%0A%0AI would like to enquire about the ${package} package.%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0APersons: ${persons}%0ATravel Date: ${date}%0A%0A${message ? 'Additional Query: ' + message : ''}`;
+          
+          // Open WhatsApp
+          window.open(`https://wa.me/919650564141?text=${whatsappMessage}`, '_blank');
+          
+          // Close modal
+          const modal = bootstrap.Modal.getInstance(document.getElementById('enquiryModal'));
+          modal.hide();
+          
+          // Reset form
+          enquiryForm.reset();
+        }
+      });
+      
+      // Remove error class on input
+      const formInputs = enquiryForm.querySelectorAll('input, select, textarea');
+      formInputs.forEach(input => {
+        input.addEventListener('input', function() {
+          if (this.classList.contains('error')) {
+            this.classList.remove('error');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
