@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Kashmir Destinations - ZoonTourism | Explore 25 Beautiful Places</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="Explore Kashmir's 25 most beautiful destinations - from Dal Lake to Gulmarg, Pahalgam to Sonamarg. Plan your perfect Kashmir trip with ZoonTourism.">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .dest-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .dest-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .dest-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .dest-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .dest-card .content {
+      padding: 20px;
+    }
+
+    .dest-card h4 {
+      color: #333;
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+    }
+
+    .dest-card .location {
+      color: #f96d00;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .dest-card p {
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .dest-card .btn-explore {
+      background: linear-gradient(135deg, #f96d00, #ff8c42);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+
+    .dest-card .btn-explore:hover {
+      background: linear-gradient(135deg, #ff8c42, #f96d00);
+      color: #fff;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .dest-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .dest-tag {
+      background: #f0f0f0;
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      color: #666;
+    }
+
+    .modal-dest .modal-content {
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .modal-dest .modal-header {
+      background: linear-gradient(135deg, #1089ff, #0d6efd);
+      color: #fff;
+      border: none;
+      padding: 20px 25px;
+    }
+
+    .modal-dest .modal-body {
+      padding: 25px;
+    }
+
+    .modal-dest .highlight-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .modal-dest .highlight-list li {
+      padding: 8px 0;
+      border-bottom: 1px dashed #eee;
+    }
+
+    .modal-dest .highlight-list li:before {
+      content: "✓";
+      color: #28a745;
+      margin-right: 10px;
+    }
+
+    .modal-dest .activity-list li:before {
+      content: "→";
+      color: #f96d00;
+    }
+
+    .modal-dest .tip-list li:before {
+      content: "💡";
+    }
+
+    .dest-carousel {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .dest-carousel .carousel-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .dest-carousel .carousel-control-prev,
+    .dest-carousel .carousel-control-next {
+      width: 40px;
+      height: 40px;
+      background: rgba(249, 109, 0, 0.9);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+
+    .dest-carousel .carousel-control-prev {
+      left: 10px;
+    }
+
+    .dest-carousel .carousel-control-next {
+      right: 10px;
+    }
+
+    .dest-carousel .carousel-indicators {
+      bottom: 10px;
+    }
+
+    .dest-carousel .carousel-indicators li {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      margin: 0 4px;
+    }
+
+    .dest-carousel .carousel-indicators li.active {
+      background: #f96d00;
+    }
+
+    .dest-hero-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .filter-btns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .filter-btn {
+      background: #f0f0f0;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: #f96d00;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ZoonTourism<span>Kashmir Tours</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="destination.html" class="nav-link">Packages</a></li>
+          <li class="nav-item active"><a href="hotel.html" class="nav-link">Destinations</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/destination-2.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+        <div class="col-md-9 ftco-animate pb-5 text-center">
+          <p class="breadcrumbs"><span><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span>
+            <span>Destinations</span>
+          </p>
+          <h1 class="mb-0 bread">Explore Kashmir's 25 Beautiful Destinations</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="section-header ftco-animate">
+        <h2>Discover Paradise on Earth</h2>
+        <p>From serene lakes to majestic mountains, explore the most breathtaking destinations in Kashmir. Click on any
+          destination to learn more.</p>
+      </div>
+
+      <div class="filter-btns ftco-animate">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="popular">Popular</button>
+        <button class="filter-btn" data-filter="lakes">Lakes</button>
+        <button class="filter-btn" data-filter="valleys">Valleys</button>
+        <button class="filter-btn" data-filter="adventure">Adventure</button>
+      </div>
+
+      <div class="dest-grid">
+        <!-- Srinagar -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#srinagarModal"
+          data-category="popular">
+          <img src="images/destination-1.jpg" alt="Srinagar">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Summer Capital</span><span class="dest-tag">Popular</span>
+            </div>
+            <h4>Srinagar</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Jammu & Kashmir</p>
+            <p>The summer capital famous for Dal Lake, houseboats, and Mughal gardens.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Gulmarg -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#gulmargModal"
+          data-category="popular adventure">
+          <img src="images/destination-3.jpg" alt="Gulmarg">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Ski Resort</span><span class="dest-tag">Adventure</span></div>
+            <h4>Gulmarg</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Baramulla District</p>
+            <p>Asia's premier ski resort with the world's highest cable car and stunning alpine scenery.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Pahalgam -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#pahalgamModal"
+          data-category="popular valleys">
+          <img src="images/destination-5.jpg" alt="Pahalgam">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Valley of Shepherds</span></div>
+            <h4>Pahalgam</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Anantnag District</p>
+            <p>The "Valley of Shepherds" with pristine valleys, rivers, and trekking routes.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Sonamarg -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#sonamargModal"
+          data-category="popular valleys">
+          <img src="images/bg_4.jpg" alt="Sonamarg">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Meadow of Gold</span></div>
+            <h4>Sonamarg</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Ganderbal District</p>
+            <p>The "Meadow of Gold" with stunning alpine valleys and snow-capped peaks.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Dal Lake -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#dalModal"
+          data-category="popular lakes">
+          <img src="images/bg_2.jpg" alt="Dal Lake">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Iconic Lake</span><span class="dest-tag">Houseboats</span>
+            </div>
+            <h4>Dal Lake</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Srinagar</p>
+            <p>Iconic lake with houseboats, shikaras, and floating gardens in Srinagar.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Betaab Valley -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#betaabModal"
+          data-category="valleys">
+          <img src="images/destination-2.jpg" alt="Betaab Valley">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Bollywood Famous</span></div>
+            <h4>Betaab Valley</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Pahalgam</p>
+            <p>Picturesque valley named after the Bollywood movie, surrounded by mountains.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Aru Valley -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#aruModal"
+          data-category="valleys adventure">
+          <img src="images/bg_5.jpg" alt="Aru Valley">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Trekking Base</span></div>
+            <h4>Aru Valley</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Pahalgam</p>
+            <p>Base camp for treks to Kolahoi Glacier with meadows and gushing streams.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Yusmarg -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#yusmargModal"
+          data-category="valleys">
+          <img src="images/destination-4.jpg" alt="Yusmarg">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Hidden Gem</span></div>
+            <h4>Yusmarg</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Budgam District</p>
+            <p>Beautiful meadow surrounded by dense forests and snow-capped mountains.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Doodhpathri -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#doodhpathriModal"
+          data-category="valleys">
+          <img src="images/destination-6.jpg" alt="Doodhpathri">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Valley of Milk</span></div>
+            <h4>Doodhpathri</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Budgam District</p>
+            <p>"Valley of Milk" with lush green meadows and gushing streams.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Mughal Gardens -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#mughalModal"
+          data-category="popular">
+          <img src="images/place-1.jpg" alt="Mughal Gardens">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Heritage</span></div>
+            <h4>Mughal Gardens</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Srinagar</p>
+            <p>Exquisite gardens built by Mughal emperors with terraced lawns and fountains.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Wular Lake -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#wularModal" data-category="lakes">
+          <img src="images/bg_1.jpg" alt="Wular Lake">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Largest Lake</span></div>
+            <h4>Wular Lake</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Bandipora District</p>
+            <p>One of the largest freshwater lakes in Asia, rich in biodiversity.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Manasbal Lake -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#manasbalModal"
+          data-category="lakes">
+          <img src="images/bg_3.jpg" alt="Manasbal Lake">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Deepest Lake</span></div>
+            <h4>Manasbal Lake</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Ganderbal District</p>
+            <p>Deepest lake in Kashmir, famous for lotus flowers and birdwatching.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Shankaracharya Temple -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#shankaracharyaModal"
+          data-category="popular">
+          <img src="images/place-2.jpg" alt="Shankaracharya Temple">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Heritage</span><span class="dest-tag">Viewpoint</span></div>
+            <h4>Shankaracharya Hill</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Srinagar</p>
+            <p>Ancient hill with temple offering panoramic views of Srinagar and Dal Lake.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Gurez Valley -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#gurezModal"
+          data-category="valleys adventure">
+          <img src="images/destination-1.jpg" alt="Gurez Valley">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Remote</span><span class="dest-tag">Offbeat</span></div>
+            <h4>Gurez Valley</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Bandipora District</p>
+            <p>Remote valley near the Line of Control with stunning natural beauty.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Kokernag -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#kokernagModal"
+          data-category="valleys">
+          <img src="images/destination-3.jpg" alt="Kokernag">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Springs</span></div>
+            <h4>Kokernag</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Anantnag District</p>
+            <p>Famous for its gardens, freshwater springs, and trout fishing.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Verinag -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#verinagModal"
+          data-category="valleys">
+          <img src="images/destination-5.jpg" alt="Verinag">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Jhelum Source</span></div>
+            <h4>Verinag</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Anantnag District</p>
+            <p>Source of River Jhelum with Mughal gardens and ancient springs.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Aharbal Waterfall -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#aharbalModal"
+          data-category="adventure">
+          <img src="images/bg_4.jpg" alt="Aharbal Waterfall">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Waterfall</span></div>
+            <h4>Aharbal Waterfall</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Kulgam District</p>
+            <p>Majestic waterfall known as the "Niagara of Kashmir" with powerful cascades.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Lolab Valley -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#lolabModal" data-category="valleys">
+          <img src="images/destination-2.jpg" alt="Lolab Valley">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Offbeat</span></div>
+            <h4>Lolab Valley</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Kupwara District</p>
+            <p>Picturesque valley with meadows, streams, and walnut groves.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Dachigam National Park -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#dachigamModal"
+          data-category="adventure">
+          <img src="images/bg_5.jpg" alt="Dachigam National Park">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Wildlife</span></div>
+            <h4>Dachigam National Park</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Srinagar</p>
+            <p>Protected area home to the endangered Hangul deer and diverse wildlife.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Amarnath Cave -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#amarnathModal"
+          data-category="adventure">
+          <img src="images/destination-4.jpg" alt="Amarnath Cave">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Pilgrimage</span></div>
+            <h4>Amarnath Cave</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Pahalgam</p>
+            <p>Sacred Hindu shrine with natural ice Shiva Lingam, accessible via pilgrimage.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Tarsar Marsar Lakes -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#tarsarModal"
+          data-category="lakes adventure">
+          <img src="images/destination-6.jpg" alt="Tarsar Marsar Lakes">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Trek</span><span class="dest-tag">Alpine Lakes</span></div>
+            <h4>Tarsar Marsar Lakes</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Anantnag District</p>
+            <p>Twin alpine lakes surrounded by snow-capped peaks, accessible via trekking.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Martand Sun Temple -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#martandModal"
+          data-category="popular">
+          <img src="images/place-1.jpg" alt="Martand Sun Temple">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Heritage</span><span class="dest-tag">Ancient</span></div>
+            <h4>Martand Sun Temple</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Anantnag District</p>
+            <p>Ancient Hindu temple ruins dedicated to the Sun God, with impressive architecture.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Kupwara Meadows -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#kupwaraModal"
+          data-category="valleys">
+          <img src="images/bg_1.jpg" alt="Kupwara Meadows">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Offbeat</span></div>
+            <h4>Kupwara Meadows</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Kupwara District</p>
+            <p>Picturesque meadows with alpine flowers and stunning mountain views.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Leh -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#lehModal"
+          data-category="popular adventure">
+          <img src="images/bg_2.jpg" alt="Leh">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">High Altitude</span><span class="dest-tag">Adventure</span>
+            </div>
+            <h4>Leh</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Ladakh Region</p>
+            <p>High-altitude desert town with ancient monasteries and stunning landscapes.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Zanskar Valley -->
+        <div class="dest-card ftco-animate" data-bs-toggle="modal" data-bs-target="#zanskarModal"
+          data-category="valleys adventure">
+          <img src="images/bg_3.jpg" alt="Zanskar Valley">
+          <div class="content">
+            <div class="dest-tags"><span class="dest-tag">Remote</span><span class="dest-tag">Adventure</span></div>
+            <h4>Zanskar Valley</h4>
+            <p class="location"><i class="fa fa-map-marker"></i> Ladakh Region</p>
+            <p>Remote Himalayan valley known for trekking, frozen river, and ancient monasteries.</p>
+            <a class="btn-explore">Explore <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals for Popular Destinations -->
+  <div class="modal fade modal-dest" id="srinagarModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Srinagar - The Summer Capital</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="srinagarCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#srinagarCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#srinagarCarousel" data-slide-to="1"></li>
+              <li data-target="#srinagarCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-1.jpg" alt="Dal Lake Srinagar"></div>
+              <div class="carousel-item"><img src="images/bg_2.jpg" alt="Srinagar Houseboats"></div>
+              <div class="carousel-item"><img src="images/place-1.jpg" alt="Mughal Gardens"></div>
+            </div>
+            <a class="carousel-control-prev" href="#srinagarCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#srinagarCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Srinagar is the largest city and the summer capital of Jammu and Kashmir. Situated in the Kashmir Valley
+            along the banks of the Jhelum River, it is famous for its stunning natural beauty, serene lakes, and
+            splendid Mughal gardens.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Dal Lake with iconic houseboats and shikaras</li>
+            <li>Mughal Gardens including Shalimar Bagh, Nishat Bagh</li>
+            <li>Historic Jamia Masjid built in the 14th century</li>
+            <li>Shankaracharya Temple with panoramic views</li>
+            <li>Traditional Kashmiri handicrafts and cuisine</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Shikara rides on Dal Lake and Nigeen Lake</li>
+            <li>Staying in traditional houseboats</li>
+            <li>Shopping for Pashmina shawls and carpets</li>
+            <li>Exploring local markets and trying Kashmiri food</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-dest" id="gulmargModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Gulmarg - Meadow of Flowers</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="gulmargCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#gulmargCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#gulmargCarousel" data-slide-to="1"></li>
+              <li data-target="#gulmargCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-3.jpg" alt="Gulmarg Meadows"></div>
+              <div class="carousel-item"><img src="images/bg_4.jpg" alt="Gulmarg Snow"></div>
+              <div class="carousel-item"><img src="images/destination-7.jpg" alt="Gulmarg Gondola"></div>
+            </div>
+            <a class="carousel-control-prev" href="#gulmargCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#gulmargCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Gulmarg, meaning 'Meadow of Flowers', is a stunning hill station at 2,650 meters. It is Asia's premier ski
+            destination with the world's second-highest operating cable car.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Gulmarg Gondola - one of the highest cable cars</li>
+            <li>St. Mary's Church - historic Anglican church</li>
+            <li>World's highest green golf course</li>
+            <li>Alpather Lake - high-altitude frozen lake</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Skiing and snowboarding (December to March)</li>
+            <li>Gondola rides to Apharwat Peak</li>
+            <li>Trekking to Khilanmarg</li>
+            <li>Pony rides through meadows</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-dest" id="pahalgamModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Pahalgam - Valley of Shepherds</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="pahalgamCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#pahalgamCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#pahalgamCarousel" data-slide-to="1"></li>
+              <li data-target="#pahalgamCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-5.jpg" alt="Pahalgam Valley"></div>
+              <div class="carousel-item"><img src="images/destination-2.jpg" alt="Betaab Valley"></div>
+              <div class="carousel-item"><img src="images/bg_5.jpg" alt="Lidder River"></div>
+            </div>
+            <a class="carousel-control-prev" href="#pahalgamCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#pahalgamCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Pahalgam is a beautiful hill station on the banks of Lidder River at 2,740 meters. It serves as the base
+            camp for the annual Amarnath Yatra pilgrimage.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Betaab Valley - Bollywood movie location</li>
+            <li>Aru Valley - base for Kolahoi Glacier treks</li>
+            <li>Lidder River - trout fishing and rafting</li>
+            <li>Baisaran Meadows - 'Mini Switzerland'</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Trekking to Kolahoi Glacier and Tarsar-Marsar</li>
+            <li>Trout fishing in Lidder River</li>
+            <li>River rafting adventures</li>
+            <li>Pony rides to nearby valleys</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-dest" id="sonamargModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sonamarg - Meadow of Gold</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="sonamargCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#sonamargCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#sonamargCarousel" data-slide-to="1"></li>
+              <li data-target="#sonamargCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/bg_4.jpg" alt="Sonamarg Meadows"></div>
+              <div class="carousel-item"><img src="images/destination-9.jpg" alt="Thajiwas Glacier"></div>
+              <div class="carousel-item"><img src="images/image_2.jpg" alt="Alpine Landscape"></div>
+            </div>
+            <a class="carousel-control-prev" href="#sonamargCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#sonamargCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Sonamarg, the "Meadow of Gold", is at 2,800 meters and serves as the gateway to Ladakh. It's the last major
+            stop on the historic Silk Road before Zoji La Pass.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Thajiwas Glacier - stunning accessible glacier</li>
+            <li>Zoji La Pass - gateway to Ladakh</li>
+            <li>Krishansar and Vishansar Lakes</li>
+            <li>Sindh River for fishing</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Trekking to Thajiwas Glacier</li>
+            <li>Pony rides through meadows</li>
+            <li>Trout fishing in Sindh River</li>
+            <li>Camping amidst nature</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-dest" id="dalModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Dal Lake - Jewel of Srinagar</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="dalCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#dalCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#dalCarousel" data-slide-to="1"></li>
+              <li data-target="#dalCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/bg_2.jpg" alt="Dal Lake View"></div>
+              <div class="carousel-item"><img src="images/destination-1.jpg" alt="Houseboats"></div>
+              <div class="carousel-item"><img src="images/hotel-resto-1.jpg" alt="Shikara Ride"></div>
+            </div>
+            <a class="carousel-control-prev" href="#dalCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#dalCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Dal Lake is the "Jewel in the crown of Kashmir". It is the second largest lake in J&K, famous for
+            houseboats and colorful shikaras.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Houseboats - traditional floating hotels</li>
+            <li>Shikaras - colorful wooden boats</li>
+            <li>Floating gardens - unique agriculture</li>
+            <li>Char Chinar - four Chinar trees island</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Shikara rides exploring the lake</li>
+            <li>Staying in traditional houseboats</li>
+            <li>Visiting floating vegetable markets</li>
+            <li>Shopping from floating vendors</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-dest" id="betaabModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Betaab Valley - Bollywood Paradise</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="betaabCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#betaabCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#betaabCarousel" data-slide-to="1"></li>
+              <li data-target="#betaabCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-2.jpg" alt="Betaab Valley"></div>
+              <div class="carousel-item"><img src="images/destination-5.jpg" alt="Lidder River"></div>
+              <div class="carousel-item"><img src="images/destination-6.jpg" alt="Mountain Views"></div>
+            </div>
+            <a class="carousel-control-prev" href="#betaabCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#betaabCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Betaab Valley is 15 km from Pahalgam, named after the 1983 Bollywood movie 'Betaab'. It's surrounded by
+            snow-capped mountains and lush green meadows.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Stunning views of Himalayan peaks</li>
+            <li>Crystal-clear Lidder River waters</li>
+            <li>Lush green meadows for picnics</li>
+            <li>Photography opportunities everywhere</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Nature walks and short treks</li>
+            <li>Photography of stunning landscapes</li>
+            <li>Pony rides through the valley</li>
+            <li>Picnics amidst natural surroundings</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Aru Valley Modal -->
+  <div class="modal fade modal-dest" id="aruModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Aru Valley - Gateway to Kolahoi</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="aruCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#aruCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#aruCarousel" data-slide-to="1"></li>
+              <li data-target="#aruCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/bg_5.jpg" alt="Aru Valley Meadows"></div>
+              <div class="carousel-item"><img src="images/destination-5.jpg" alt="Aru Valley Stream"></div>
+              <div class="carousel-item"><img src="images/image_2.jpg" alt="Kolahoi Glacier View"></div>
+            </div>
+            <a class="carousel-control-prev" href="#aruCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#aruCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Aru Valley is 12 km from Pahalgam at 2,408 meters altitude. It serves as base camp for treks to Kolahoi
+            Glacier and Tarsar-Marsar Lakes.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Gateway to Kolahoi Glacier trek</li>
+            <li>Scenic meadows with gushing streams</li>
+            <li>Traditional wooden houses</li>
+            <li>Snow-capped mountain views</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Trekking to Kolahoi Glacier</li>
+            <li>Fishing in mountain streams</li>
+            <li>Camping under the stars</li>
+            <li>Pony rides through meadows</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Yusmarg Modal -->
+  <div class="modal fade modal-dest" id="yusmargModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Yusmarg - The Hidden Meadow</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="yusmargCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#yusmargCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#yusmargCarousel" data-slide-to="1"></li>
+              <li data-target="#yusmargCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-4.jpg" alt="Yusmarg Meadows"></div>
+              <div class="carousel-item"><img src="images/bg_1.jpg" alt="Yusmarg Forest"></div>
+              <div class="carousel-item"><img src="images/destination-6.jpg" alt="Yusmarg Landscape"></div>
+            </div>
+            <a class="carousel-control-prev" href="#yusmargCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#yusmargCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Yusmarg, meaning "Meadow of Jesus", is a beautiful hill station at 2,396 meters in Budgam district. This
+            offbeat destination offers serene beauty away from tourist crowds.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Nilnag Lake - pristine freshwater lake</li>
+            <li>Doodhganga River flowing through</li>
+            <li>Dense pine and fir forests</li>
+            <li>Sunset Point panoramic views</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Trekking to Nilnag Lake</li>
+            <li>Horse riding through meadows</li>
+            <li>Picnics by Doodhganga River</li>
+            <li>Photography of wildflowers</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Doodhpathri Modal -->
+  <div class="modal fade modal-dest" id="doodhpathriModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Doodhpathri - Valley of Milk</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="doodhpathriCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#doodhpathriCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#doodhpathriCarousel" data-slide-to="1"></li>
+              <li data-target="#doodhpathriCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-6.jpg" alt="Doodhpathri Meadows"></div>
+              <div class="carousel-item"><img src="images/bg_1.jpg" alt="Doodhpathri Stream"></div>
+              <div class="carousel-item"><img src="images/destination-4.jpg" alt="Doodhpathri Valley"></div>
+            </div>
+            <a class="carousel-control-prev" href="#doodhpathriCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#doodhpathriCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Doodhpathri, meaning "Valley of Milk", is 42 km from Srinagar in Budgam. The waters here appear milky white
+            due to the reflection of surrounding meadows.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Milky white streams and springs</li>
+            <li>Lush green alpine meadows</li>
+            <li>Pine forest surroundings</li>
+            <li>Shaliganga River scenic beauty</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Pony rides across meadows</li>
+            <li>Photography of scenic landscapes</li>
+            <li>Picnics by crystal streams</li>
+            <li>Bird watching in forests</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mughal Gardens Modal -->
+  <div class="modal fade modal-dest" id="mughalModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Mughal Gardens - Imperial Heritage</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="mughalCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#mughalCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#mughalCarousel" data-slide-to="1"></li>
+              <li data-target="#mughalCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/place-1.jpg" alt="Shalimar Bagh"></div>
+              <div class="carousel-item"><img src="images/place-2.jpg" alt="Nishat Bagh"></div>
+              <div class="carousel-item"><img src="images/destination-1.jpg" alt="Chashme Shahi"></div>
+            </div>
+            <a class="carousel-control-prev" href="#mughalCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#mughalCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>The Mughal Gardens of Srinagar were built in the 16th-17th century by Mughal emperors. These terraced
+            gardens showcase Persian design with charbagh layout and cascading fountains.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Shalimar Bagh - Garden of Love</li>
+            <li>Nishat Bagh - Garden of Joy</li>
+            <li>Chashme Shahi - Royal Spring</li>
+            <li>Terraced lawns with Chinar trees</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Exploring historical architecture</li>
+            <li>Photography of gardens and fountains</li>
+            <li>Enjoying Chinar tree shade</li>
+            <li>Picnics in garden lawns</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wular Lake Modal -->
+  <div class="modal fade modal-dest" id="wularModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Wular Lake - Asia's Largest</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="wularCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#wularCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#wularCarousel" data-slide-to="1"></li>
+              <li data-target="#wularCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/bg_1.jpg" alt="Wular Lake View"></div>
+              <div class="carousel-item"><img src="images/bg_2.jpg" alt="Wular Sunset"></div>
+              <div class="carousel-item"><img src="images/bg_3.jpg" alt="Wular Birds"></div>
+            </div>
+            <a class="carousel-control-prev" href="#wularCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#wularCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Wular Lake in Bandipora is one of Asia's largest freshwater lakes, spanning 189 sq km. It's fed by Jhelum
+            River and is home to diverse bird species and aquatic life.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Vast expanse of freshwater</li>
+            <li>Zaina Kadal island</li>
+            <li>Rich biodiversity and migratory birds</li>
+            <li>Water chestnut harvesting</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Boating on the lake</li>
+            <li>Bird watching excursions</li>
+            <li>Photography of sunsets</li>
+            <li>Visiting fishing villages</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Manasbal Lake Modal -->
+  <div class="modal fade modal-dest" id="manasbalModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Manasbal Lake - Deepest Lake</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="manasbalCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#manasbalCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#manasbalCarousel" data-slide-to="1"></li>
+              <li data-target="#manasbalCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/bg_3.jpg" alt="Manasbal Lake"></div>
+              <div class="carousel-item"><img src="images/bg_1.jpg" alt="Lotus Flowers"></div>
+              <div class="carousel-item"><img src="images/bg_2.jpg" alt="Lake Sunset"></div>
+            </div>
+            <a class="carousel-control-prev" href="#manasbalCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#manasbalCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Manasbal Lake in Ganderbal is Kashmir's deepest lake (13 meters). Known for lotus blooms in summer and as
+            the "Supreme gem of all Kashmir lakes."</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Beautiful lotus flower blooms (July-August)</li>
+            <li>Ancient Mughal garden ruins</li>
+            <li>Bird sanctuary for migratory birds</li>
+            <li>Historic Jharokha watch tower</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Shikara rides on calm waters</li>
+            <li>Photography of lotus flowers</li>
+            <li>Bird watching excursions</li>
+            <li>Exploring Mughal ruins</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shankaracharya Modal -->
+  <div class="modal fade modal-dest" id="shankaracharyaModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Shankaracharya Hill - Ancient Temple</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="shankaracharyaCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#shankaracharyaCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#shankaracharyaCarousel" data-slide-to="1"></li>
+              <li data-target="#shankaracharyaCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/place-2.jpg" alt="Shankaracharya Temple"></div>
+              <div class="carousel-item"><img src="images/destination-1.jpg" alt="City View"></div>
+              <div class="carousel-item"><img src="images/bg_2.jpg" alt="Dal Lake View"></div>
+            </div>
+            <a class="carousel-control-prev" href="#shankaracharyaCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#shankaracharyaCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Shankaracharya Temple stands atop a 1,000 ft hill overlooking Srinagar. Built in 200 BC, it's one of the
+            oldest temples in Kashmir dedicated to Lord Shiva.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>360° panoramic views of Srinagar</li>
+            <li>Ancient temple architecture</li>
+            <li>View of Dal Lake from summit</li>
+            <li>Historical significance since 200 BC</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Climbing 243 stone steps</li>
+            <li>Photography of city views</li>
+            <li>Spiritual prayers at temple</li>
+            <li>Sunset viewing from hilltop</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gurez Valley Modal -->
+  <div class="modal fade modal-dest" id="gurezModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Gurez Valley - Remote Paradise</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="gurezCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#gurezCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#gurezCarousel" data-slide-to="1"></li>
+              <li data-target="#gurezCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-7.jpg" alt="Gurez Valley"></div>
+              <div class="carousel-item"><img src="images/bg_4.jpg" alt="Kishanganga River"></div>
+              <div class="carousel-item"><img src="images/destination-8.jpg" alt="Habba Khatoon Peak"></div>
+            </div>
+            <a class="carousel-control-prev" href="#gurezCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#gurezCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Gurez Valley is 123 km from Srinagar near the LOC. This remote valley at 2,400 meters is home to the Dard
+            Shin tribe and offers untouched natural beauty.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Habba Khatoon peak views</li>
+            <li>Kishanganga River flowing through</li>
+            <li>Traditional Dard Shin villages</li>
+            <li>Pristine untouched landscapes</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Trekking in remote areas</li>
+            <li>Cultural experiences with locals</li>
+            <li>River fishing in Kishanganga</li>
+            <li>Photography of unique landscapes</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kokernag Modal -->
+  <div class="modal fade modal-dest" id="kokernagModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Kokernag - Garden of Springs</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="kokernagCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#kokernagCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#kokernagCarousel" data-slide-to="1"></li>
+              <li data-target="#kokernagCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-8.jpg" alt="Kokernag Gardens"></div>
+              <div class="carousel-item"><img src="images/destination-9.jpg" alt="Kokernag Springs"></div>
+              <div class="carousel-item"><img src="images/bg_1.jpg" alt="Trout Fish"></div>
+            </div>
+            <a class="carousel-control-prev" href="#kokernagCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#kokernagCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Kokernag is famous for its freshwater springs and botanical garden in Anantnag. The natural springs here
+            are believed to have medicinal properties.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Largest freshwater spring in Kashmir</li>
+            <li>Beautiful botanical garden</li>
+            <li>Trout fish hatchery</li>
+            <li>Medicinal healing springs</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Exploring botanical gardens</li>
+            <li>Trout fishing with permits</li>
+            <li>Drinking from healing springs</li>
+            <li>Picnics by flowing waters</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Verinag Modal -->
+  <div class="modal fade modal-dest" id="verinagModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Verinag - Source of Jhelum</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="verinagCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#verinagCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#verinagCarousel" data-slide-to="1"></li>
+              <li data-target="#verinagCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-9.jpg" alt="Verinag Spring"></div>
+              <div class="carousel-item"><img src="images/place-1.jpg" alt="Mughal Basin"></div>
+              <div class="carousel-item"><img src="images/destination-8.jpg" alt="Terraced Garden"></div>
+            </div>
+            <a class="carousel-control-prev" href="#verinagCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#verinagCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Verinag is the source of River Jhelum, 76 km from Srinagar. Emperor Jahangir built an octagonal basin
+            around the spring in 1620 AD.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Origin point of River Jhelum</li>
+            <li>Mughal octagonal basin</li>
+            <li>Terraced Mughal garden</li>
+            <li>Crystal clear spring waters</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Exploring Mughal architecture</li>
+            <li>Walking through terraced garden</li>
+            <li>Photography of the spring</li>
+            <li>Picnics in Mughal lawns</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Aharbal Modal -->
+  <div class="modal fade modal-dest" id="aharbalModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Aharbal - Niagara of Kashmir</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="aharbalCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#aharbalCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#aharbalCarousel" data-slide-to="1"></li>
+              <li data-target="#aharbalCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-10.jpg" alt="Aharbal Waterfall"></div>
+              <div class="carousel-item"><img src="images/bg_4.jpg" alt="Veshav River"></div>
+              <div class="carousel-item"><img src="images/destination-11.jpg" alt="Pine Forest"></div>
+            </div>
+            <a class="carousel-control-prev" href="#aharbalCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#aharbalCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Aharbal Waterfall in Kulgam is called "Niagara of Kashmir". The Veshav River falls 25 meters creating a
+            spectacular sight surrounded by pine forests.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>25-meter high waterfall</li>
+            <li>Mighty Veshav River</li>
+            <li>Dense pine forests</li>
+            <li>Trekking trails nearby</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Waterfall viewing and photography</li>
+            <li>Trekking to Kounsarnag Lake</li>
+            <li>Camping near the falls</li>
+            <li>Nature walks through forests</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lolab Valley Modal -->
+  <div class="modal fade modal-dest" id="lolabModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Lolab Valley - Offbeat Paradise</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="lolabCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#lolabCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#lolabCarousel" data-slide-to="1"></li>
+              <li data-target="#lolabCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-11.jpg" alt="Lolab Valley"></div>
+              <div class="carousel-item"><img src="images/destination-4.jpg" alt="Walnut Groves"></div>
+              <div class="carousel-item"><img src="images/bg_5.jpg" alt="Satbaran Meadow"></div>
+            </div>
+            <a class="carousel-control-prev" href="#lolabCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#lolabCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Lolab Valley in Kupwara is an offbeat destination with walnut groves, meadows, and streams. It's known for
+            its scenic beauty and peaceful atmosphere.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Vast walnut orchards</li>
+            <li>Lahwal and Kalaroos caves</li>
+            <li>Satbaran meadow</li>
+            <li>Crystal clear streams</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Exploring limestone caves</li>
+            <li>Walking through walnut groves</li>
+            <li>Photography of meadows</li>
+            <li>Interacting with local villagers</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dachigam Modal -->
+  <div class="modal fade modal-dest" id="dachigamModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Dachigam National Park</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="dachigamCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#dachigamCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#dachigamCarousel" data-slide-to="1"></li>
+              <li data-target="#dachigamCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/destination-12.jpg" alt="Dachigam Forest"></div>
+              <div class="carousel-item"><img src="images/bg_5.jpg" alt="Wildlife Area"></div>
+              <div class="carousel-item"><img src="images/destination-7.jpg" alt="Mountain Deer"></div>
+            </div>
+            <a class="carousel-control-prev" href="#dachigamCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#dachigamCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Dachigam is a protected wildlife sanctuary 22 km from Srinagar. It's home to the endangered Hangul (Kashmir
+            stag) and diverse flora and fauna.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Hangul (Kashmir stag) sanctuary</li>
+            <li>Himalayan black and brown bears</li>
+            <li>Leopards and musk deer</li>
+            <li>Rich bird diversity</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Wildlife safaris (with permits)</li>
+            <li>Bird watching expeditions</li>
+            <li>Nature photography</li>
+            <li>Trekking in lower Dachigam</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Amarnath Modal -->
+  <div class="modal fade modal-dest" id="amarnathModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Amarnath Cave - Sacred Pilgrimage</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="amarnathCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#amarnathCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#amarnathCarousel" data-slide-to="1"></li>
+              <li data-target="#amarnathCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/image_1.jpg" alt="Amarnath Cave"></div>
+              <div class="carousel-item"><img src="images/bg_4.jpg" alt="Pilgrimage Trek"></div>
+              <div class="carousel-item"><img src="images/destination-5.jpg" alt="Himalayan View"></div>
+            </div>
+            <a class="carousel-control-prev" href="#amarnathCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#amarnathCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Amarnath Cave at 3,880 meters is a sacred Hindu shrine with a naturally formed ice Shiva Lingam. The annual
+            Yatra attracts lakhs of devotees.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Natural ice Shiva Lingam</li>
+            <li>Ancient cave shrine</li>
+            <li>Stunning Himalayan scenery</li>
+            <li>Spiritual significance</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Pilgrimage yatra (July-August)</li>
+            <li>Trek via Pahalgam or Baltal route</li>
+            <li>Helicopter services available</li>
+            <li>Spiritual meditation and prayers</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tarsar Marsar Modal -->
+  <div class="modal fade modal-dest" id="tarsarModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Tarsar Marsar - Twin Alpine Lakes</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="tarsarCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#tarsarCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#tarsarCarousel" data-slide-to="1"></li>
+              <li data-target="#tarsarCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/image_2.jpg" alt="Tarsar Lake"></div>
+              <div class="carousel-item"><img src="images/bg_1.jpg" alt="Alpine Meadows"></div>
+              <div class="carousel-item"><img src="images/destination-6.jpg" alt="Mountain Trek"></div>
+            </div>
+            <a class="carousel-control-prev" href="#tarsarCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#tarsarCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Tarsar and Marsar are twin alpine lakes in Anantnag at 3,800 meters. The 4-day trek from Aru Valley offers
+            stunning high-altitude scenery.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Crystal clear twin alpine lakes</li>
+            <li>Surrounded by snow peaks</li>
+            <li>Stunning meadows en route</li>
+            <li>Remote and pristine landscapes</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>4-day trekking expedition</li>
+            <li>Camping by the lakes</li>
+            <li>High-altitude photography</li>
+            <li>Experiencing shepherd culture</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Martand Sun Temple Modal -->
+  <div class="modal fade modal-dest" id="martandModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Martand Sun Temple - Ancient Ruins</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="martandCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#martandCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#martandCarousel" data-slide-to="1"></li>
+              <li data-target="#martandCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/image_3.jpg" alt="Martand Temple Ruins"></div>
+              <div class="carousel-item"><img src="images/place-1.jpg" alt="Temple Columns"></div>
+              <div class="carousel-item"><img src="images/place-2.jpg" alt="Valley View"></div>
+            </div>
+            <a class="carousel-control-prev" href="#martandCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#martandCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Martand Sun Temple near Anantnag was built in 8th century by King Lalitaditya Muktapida. These magnificent
+            ruins showcase Kashmiri architecture at its peak.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>8th century ruins</li>
+            <li>Greco-Roman and Gandhara architecture</li>
+            <li>84 columns surrounding courtyard</li>
+            <li>Views of Kashmir Valley</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Exploring ancient architecture</li>
+            <li>Historical photography</li>
+            <li>Learning about Kashmiri history</li>
+            <li>Sunset views from temple</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kupwara Meadows Modal -->
+  <div class="modal fade modal-dest" id="kupwaraModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Kupwara Meadows - Hidden Gem</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="kupwaraCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#kupwaraCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#kupwaraCarousel" data-slide-to="1"></li>
+              <li data-target="#kupwaraCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/image_4.jpg" alt="Kupwara Meadow"></div>
+              <div class="carousel-item"><img src="images/bg_5.jpg" alt="Alpine Flowers"></div>
+              <div class="carousel-item"><img src="images/destination-4.jpg" alt="Mountain View"></div>
+            </div>
+            <a class="carousel-control-prev" href="#kupwaraCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#kupwaraCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Kupwara meadows are offbeat destinations in North Kashmir. These untouched landscapes offer stunning
+            mountain views and alpine flora.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Alpine meadows with wildflowers</li>
+            <li>Snow-capped mountain views</li>
+            <li>Traditional shepherd huts</li>
+            <li>Pristine natural beauty</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Trekking through meadows</li>
+            <li>Photography of landscapes</li>
+            <li>Camping experiences</li>
+            <li>Interacting with shepherds</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leh Modal -->
+  <div class="modal fade modal-dest" id="lehModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Leh - Land of High Passes</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="lehCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#lehCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#lehCarousel" data-slide-to="1"></li>
+              <li data-target="#lehCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/image_5.jpg" alt="Leh Palace"></div>
+              <div class="carousel-item"><img src="images/bg_3.jpg" alt="Pangong Lake"></div>
+              <div class="carousel-item"><img src="images/image_6.jpg" alt="Monasteries"></div>
+            </div>
+            <a class="carousel-control-prev" href="#lehCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#lehCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Leh is at 3,500 meters in Ladakh. This ancient Silk Road town features Buddhist monasteries, stark
+            landscapes, and high-altitude adventure.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Leh Palace - mini Potala Palace</li>
+            <li>Shanti Stupa panoramic views</li>
+            <li>Thiksey and Hemis monasteries</li>
+            <li>Magnetic Hill phenomenon</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Monasteries and heritage tours</li>
+            <li>Mountain biking on high passes</li>
+            <li>River rafting in Indus/Zanskar</li>
+            <li>Pangong and Nubra Valley trips</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zanskar Valley Modal -->
+  <div class="modal fade modal-dest" id="zanskarModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Zanskar Valley - Frozen River Trek</h5><button type="button" class="close"
+            data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div id="zanskarCarousel" class="carousel slide dest-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#zanskarCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#zanskarCarousel" data-slide-to="1"></li>
+              <li data-target="#zanskarCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="images/image_6.jpg" alt="Zanskar River"></div>
+              <div class="carousel-item"><img src="images/bg_4.jpg" alt="Chadar Trek"></div>
+              <div class="carousel-item"><img src="images/image_5.jpg" alt="Phuktal Monastery"></div>
+            </div>
+            <a class="carousel-control-prev" href="#zanskarCarousel" data-slide="prev"><span
+                class="fa fa-chevron-left"></span></a>
+            <a class="carousel-control-next" href="#zanskarCarousel" data-slide="next"><span
+                class="fa fa-chevron-right"></span></a>
+          </div>
+          <p>Zanskar Valley is one of the remotest regions in Ladakh. Known for the famous Chadar Trek on the frozen
+            Zanskar River in winter.</p>
+          <h6><i class="fa fa-star text-warning"></i> Highlights</h6>
+          <ul class="highlight-list">
+            <li>Chadar frozen river trek</li>
+            <li>Ancient Phuktal Monastery</li>
+            <li>Zanskar River gorges</li>
+            <li>Remote Buddhist villages</li>
+          </ul>
+          <h6><i class="fa fa-bicycle text-primary"></i> Activities</h6>
+          <ul class="highlight-list activity-list">
+            <li>Chadar trek (January-February)</li>
+            <li>River rafting in summer</li>
+            <li>Visiting remote monasteries</li>
+            <li>High-altitude trekking</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section class="ftco-intro ftco-section ftco-no-pt">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+          <div class="img" style="background-image: url(images/bg_2.jpg);">
+            <div class="overlay"></div>
+            <h2>Ready to Explore Kashmir?</h2>
+            <p>Let us help you plan the perfect trip to these amazing destinations!</p>
+            <p class="mb-0"><a href="contact.html" class="btn btn-primary px-4 py-3">Get Your Free Quote</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">About ZoonTourism</h2>
+            <p>ZoonTourism creates transformative journeys across Kashmir and India, built on sustainability, authentic
+              experiences, and community impact. We believe in responsible tourism that benefits local communities.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+              <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+              <li class="ftco-animate"><a
+                  href="https://www.instagram.com/zoontourism?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><span
+                    class="fa fa-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+            <h2 class="ftco-heading-2">Information</h2>
+            <ul class="list-unstyled">
+              <li><a href="contact.html" class="py-2 d-block">Online Enquiry</a></li>
+              <li><a href="contact.html" class="py-2 d-block">General Enquiries</a></li>
+              <li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
+              <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
+              <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
+              <li><a href="tel:+919318407221" class="py-2 d-block">Call Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+            <h2 class="ftco-heading-2">Quick Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="py-2 d-block">Home</a></li>
+              <li><a href="about.html" class="py-2 d-block">About Us</a></li>
+              <li><a href="destination.html" class="py-2 d-block">Packages</a></li>
+              <li><a href="hotel.html" class="py-2 d-block">Destinations</a></li>
+              <li><a href="blog.html" class="py-2 d-block">Blog</a></li>
+              <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon fa fa-map-marker"></span><span class="text">Zakir Nagar, Okhla, New Delhi 110025,
+                    India</span></li>
+                <li><a href="tel:+919318407221"><span class="icon fa fa-phone"></span><span class="text">+91 93184
+                      07221</span></a></li>
+                <li><a href="mailto:zoontourism@gmail.com"><span class="icon fa fa-paper-plane"></span><span
+                      class="text">zoontourism@gmail.com</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> ZoonTourism. All rights reserved. | Building
+            sustainable travel experiences across Kashmir and India.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Filter functionality
+    $('.filter-btn').click(function () {
+      $('.filter-btn').removeClass('active');
+      $(this).addClass('active');
+      var filter = $(this).data('filter');
+      if (filter === 'all') {
+        $('.dest-card').fadeIn(300);
+      } else {
+        $('.dest-card').each(function () {
+          var categories = $(this).data('category') || '';
+          if (categories.indexOf(filter) !== -1) {
+            $(this).fadeIn(300);
+          } else {
+            $(this).fadeOut(300);
+          }
+        });
+      }
+    });
+    // Card click opens modal
+    $('.dest-card').click(function () {
+      var target = $(this).data('bs-target');
+      if (target) $(target).modal('show');
+    });
+  </script>
+</body>
+
+</html>
