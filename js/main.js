@@ -285,3 +285,30 @@
 
 })(jQuery);
 
+function sendContactToWhatsApp() {
+	// Get values from form fields
+	var name = document.getElementById('contactName').value;
+	var email = document.getElementById('contactEmail').value;
+	var phone = document.getElementById('contactPhone').value;
+	var subject = document.getElementById('contactSubject').value;
+	var message = document.getElementById('contactMessage').value;
+
+	// Validate required fields
+	if (!name || !email || !message) {
+		alert('Please fill in Name, Email and Message fields.');
+		return;
+	}
+
+	// Create WhatsApp message
+	var whatsappMessage = "*New Contact Enquiry from Website* %0A%0A" +
+		"*Name:* " + encodeURIComponent(name) + "%0A" +
+		"*Email:* " + encodeURIComponent(email) + "%0A" +
+		"*Phone:* " + encodeURIComponent(phone || "Not provided") + "%0A" +
+		"*Subject:* " + encodeURIComponent(subject || "General Enquiry") + "%0A" +
+		"*Message:* " + encodeURIComponent(message);
+
+	// Open WhatsApp
+	var whatsappUrl = "https://wa.me/916204230133?text=" + whatsappMessage;
+	window.open(whatsappUrl, '_blank');
+}
+
